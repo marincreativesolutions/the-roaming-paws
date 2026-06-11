@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Roaming Pawsâ„¢ â€” Adventure Stories for Little Explorers</title>
-<meta name="description" content="The Roaming Pawsâ„¢ is a children's book series inspired by real places, real adventures, and one very real dog named Luna. Shop the books, fine art prints, and more.">
+<title>The Roaming Paws&trade; &mdash; Adventure Stories for Little Explorers</title>
+<meta name="description" content="The Roaming Paws&trade; is a children's book series inspired by real places, real adventures, and one very real dog named Luna. Shop the books, fine art prints, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,8 +20,6 @@
     --gold-pale:    #fdeebb;
     --cream:        #fdf6e8;
     --white:        #ffffff;
-    --text-dark:    #1a0a2e;
-    --text-mid:     #4a3a6a;
     --grad-hero: linear-gradient(160deg, #0d0520 0%, #2d1457 40%, #1a3a6e 80%, #0d2040 100%);
   }
 
@@ -34,7 +32,7 @@
     overflow-x: hidden;
   }
 
-  /* â”€â”€ NAV â”€â”€ */
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     display: flex; align-items: center; justify-content: space-between;
@@ -73,7 +71,7 @@
   }
   .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,168,67,0.5); }
 
-  /* â”€â”€ HERO â”€â”€ */
+  /* HERO */
   #home {
     min-height: 100vh;
     background: var(--grad-hero);
@@ -83,7 +81,8 @@
 
   .hero-stars {
     position: absolute; inset: 0;
-    background-image: radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.6) 0%, transparent 100%),
       radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
       radial-gradient(1.5px 1.5px at 50% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
       radial-gradient(1px 1px at 15% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
@@ -106,7 +105,6 @@
     position: relative; z-index: 1;
   }
 
-  .hero-text { }
   .hero-badge {
     font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
     letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
@@ -173,7 +171,7 @@
     pointer-events: none;
   }
 
-  /* â”€â”€ SECTION SHARED â”€â”€ */
+  /* SECTIONS */
   section { padding: 100px 60px; }
   .section-badge {
     font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
@@ -196,20 +194,55 @@
     margin: 0 auto 60px;
   }
 
-  /* â”€â”€ BOOK SECTION â”€â”€ */
+  /* BOOKS */
   #book { background: linear-gradient(180deg, var(--purple-deep) 0%, #0d1535 100%); }
 
   .book-inner {
     display: grid; grid-template-columns: 1fr 1.3fr;
     gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;
+    margin-bottom: 80px;
   }
-  .book-cover-wrap { position: relative; }
   .book-cover-wrap img {
     width: 100%; max-width: 360px;
     border-radius: 10px;
     box-shadow: 0 25px 70px rgba(0,0,0,0.6), 0 0 40px rgba(180,100,20,0.25);
   }
-  .book-details { }
+
+  /* Book 2 Teaser */
+  .book2-teaser {
+    max-width: 1100px; margin: 0 auto;
+    border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 20px;
+    background: rgba(212,168,67,0.04);
+    padding: 50px 60px;
+  }
+  .book2-teaser-inner {
+    display: grid; grid-template-columns: 260px 1fr;
+    gap: 60px; align-items: center;
+  }
+  .book2-cover-wrap {
+    position: relative; width: 100%;
+  }
+  .book2-cover-wrap img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 0 30px rgba(180,100,20,0.2);
+    filter: brightness(0.88);
+  }
+  .book2-coming-badge {
+    position: absolute; top: 14px; left: 14px;
+    font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--purple-deep);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  @media (max-width: 900px) {
+    .book2-teaser { padding: 30px 24px; }
+    .book2-teaser-inner { grid-template-columns: 1fr; }
+    .book2-cover-wrap { max-width: 220px; margin: 0 auto; }
+  }
   .book-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem; font-weight: 700; color: var(--white);
@@ -233,14 +266,13 @@
   .book-meta span strong { display: block; color: var(--gold-pale); font-size: 0.9rem; margin-bottom: 2px; }
   .book-buy { display: flex; gap: 14px; flex-wrap: wrap; }
 
-  /* â”€â”€ SHOP SECTION â”€â”€ */
+  /* SHOP */
   #shop { background: linear-gradient(180deg, #0d1535 0%, #0d0520 100%); }
 
   .shop-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 28px; max-width: 1100px; margin: 0 auto;
   }
-
   .shop-card {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(212,168,67,0.15);
@@ -281,14 +313,13 @@
     color: var(--gold-light);
   }
   .shop-card-price span { font-size: 0.8rem; font-weight: 400; color: rgba(253,246,232,0.5); margin-left: 4px; }
-
   .shop-cta-wrap { text-align: center; margin-top: 50px; }
   .shop-note {
     font-family: 'Inter', sans-serif; font-size: 0.8rem;
     color: rgba(253,246,232,0.45); margin-top: 16px; letter-spacing: 1px;
   }
 
-  /* â”€â”€ ABOUT SECTION â”€â”€ */
+  /* ABOUT */
   #about { background: linear-gradient(180deg, #0d0520 0%, #10172a 100%); }
 
   .about-inner {
@@ -296,17 +327,13 @@
     gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;
   }
   .about-img-wrap { position: relative; }
-  .about-img-wrap img {
-    width: 100%; border-radius: 16px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-  }
+  .about-img-wrap img { width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
   .about-img-accent {
     position: absolute; bottom: -20px; right: -20px;
     width: 120px; height: 120px; border-radius: 50%;
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
     opacity: 0.12;
   }
-  .about-text {}
   .about-body {
     font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.85;
     color: rgba(253,246,232,0.82);
@@ -319,7 +346,7 @@
     margin-top: 32px; display: block;
   }
 
-  /* â”€â”€ NEWSLETTER â”€â”€ */
+  /* NEWSLETTER */
   #newsletter {
     background: linear-gradient(135deg, #1a0a2e 0%, #0d1535 50%, #1a0a2e 100%);
     text-align: center; padding: 100px 60px;
@@ -330,7 +357,6 @@
     animation: float 3s ease-in-out infinite;
   }
   @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-
   .newsletter-form { display: flex; gap: 12px; margin-top: 36px; }
   .newsletter-input {
     flex: 1; padding: 16px 24px; border-radius: 40px;
@@ -346,9 +372,8 @@
     color: rgba(253,246,232,0.35); margin-top: 14px; letter-spacing: 0.5px;
   }
 
-  /* â”€â”€ CONTACT SECTION â”€â”€ */
+  /* CONTACT */
   #contact { background: #0d0520; }
-
   .contact-inner { max-width: 700px; margin: 0 auto; }
   .contact-form { display: grid; gap: 18px; }
   .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -362,63 +387,40 @@
     border: 1.5px solid rgba(212,168,67,0.2);
     background: rgba(255,255,255,0.05);
     color: var(--cream); font-family: 'Lora', serif; font-size: 0.95rem;
-    outline: none; transition: border-color 0.3s;
-    resize: none;
+    outline: none; transition: border-color 0.3s; resize: none;
   }
   .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
   .form-textarea { min-height: 130px; }
   .contact-info {
-    margin-top: 50px; display: flex; gap: 40px; justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 50px; display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
   }
-  .contact-item {
-    text-align: center;
-    font-family: 'Lora', serif;
-  }
+  .contact-item { text-align: center; }
   .contact-item-icon { font-size: 1.6rem; margin-bottom: 8px; display: block; }
   .contact-item-label {
     font-family: 'Inter', sans-serif; font-size: 0.72rem;
     letter-spacing: 2px; text-transform: uppercase;
     color: var(--gold); display: block; margin-bottom: 4px;
   }
-  .contact-item-val { font-size: 0.95rem; color: rgba(253,246,232,0.7); }
+  .contact-item-val { font-family: 'Lora', serif; font-size: 0.95rem; color: rgba(253,246,232,0.7); }
 
-  /* â”€â”€ FOOTER â”€â”€ */
-  footer {
-    background: #060212; padding: 50px 60px 30px;
-    text-align: center;
-  }
-  .footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem; font-weight: 700; color: var(--gold-light);
-    margin-bottom: 6px;
-  }
-  .footer-tagline {
-    font-family: 'Lora', serif; font-size: 0.88rem;
-    font-style: italic; color: rgba(253,246,232,0.4);
-    margin-bottom: 28px;
-  }
-  .footer-links {
-    display: flex; gap: 28px; justify-content: center;
-    list-style: none; margin-bottom: 28px;
-  }
+  /* FOOTER */
+  footer { background: #060212; padding: 50px 60px 30px; text-align: center; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 6px; }
+  .footer-tagline { font-family: 'Lora', serif; font-size: 0.88rem; font-style: italic; color: rgba(253,246,232,0.4); margin-bottom: 28px; }
+  .footer-links { display: flex; gap: 28px; justify-content: center; list-style: none; margin-bottom: 28px; }
   .footer-links a {
     font-family: 'Inter', sans-serif; font-size: 0.75rem;
     letter-spacing: 2px; text-transform: uppercase;
-    color: rgba(253,246,232,0.4); text-decoration: none;
-    transition: color 0.3s;
+    color: rgba(253,246,232,0.4); text-decoration: none; transition: color 0.3s;
   }
   .footer-links a:hover { color: var(--gold); }
-  .footer-copy {
-    font-family: 'Inter', sans-serif; font-size: 0.72rem;
-    color: rgba(253,246,232,0.25); letter-spacing: 0.5px;
-  }
+  .footer-copy { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: rgba(253,246,232,0.25); letter-spacing: 0.5px; }
 
-  /* â”€â”€ SCROLL ANIMATIONS â”€â”€ */
+  /* ANIMATIONS */
   .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  /* â”€â”€ RESPONSIVE â”€â”€ */
+  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
@@ -439,12 +441,12 @@
 <!-- NAV -->
 <nav id="navbar">
   <a href="#home" class="nav-logo">
-    The Roaming Pawsâ„¢
+    The Roaming Paws&trade;
     <span>Adventure Stories</span>
   </a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#book">Book</a></li>
+    <li><a href="#book">Books</a></li>
     <li><a href="#shop">Shop</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -458,43 +460,71 @@
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-text fade-up">
-      <span class="hero-badge">âœ¦ The Roaming Pawsâ„¢ â€” Book One</span>
+      <span class="hero-badge">The Roaming Paws&trade; &mdash; Book One</span>
       <h1 class="hero-title">Luna Finds Her Brave</h1>
       <p class="hero-subtitle">A Yosemite Adventure</p>
       <p class="hero-desc">A children's book series inspired by real places, real adventures, and one very real dog named Luna. Join Luna and her companion Oliver as they explore the most breathtaking corners of the world.</p>
       <div class="hero-buttons">
-        <a href="#book" class="btn-primary">âœ¦ &nbsp;Read the Story</a>
+        <a href="#book" class="btn-primary">Read the Story</a>
         <a href="#shop" class="btn-secondary">Shop Prints</a>
       </div>
     </div>
     <div class="hero-book fade-up">
       <div class="hero-book-glow"></div>
-      <img src="images/cover.png" alt="Luna Finds Her Brave â€” Book Cover" />
+      <img src="images/cover.png" alt="Luna Finds Her Brave &mdash; Book Cover" />
     </div>
   </div>
 </section>
 
-<!-- BOOK -->
+<!-- BOOKS -->
 <section id="book">
-  <span class="section-badge fade-up">âœ¦ The Book</span>
-  <h2 class="section-title fade-up">Luna Finds Her Brave</h2>
+  <span class="section-badge fade-up">The Series</span>
+  <h2 class="section-title fade-up">The Roaming Paws&trade; Books</h2>
+  <p class="section-subtitle fade-up">Every book is a real adventure. Every place is a real destination.</p>
   <div class="section-divider"></div>
-  <div class="book-inner">
-    <div class="book-cover-wrap fade-up">
+
+  <!-- BOOK 1 - FEATURED -->
+  <div class="book-inner fade-up">
+    <div class="book-cover-wrap">
       <img src="images/cover.png" alt="Luna Finds Her Brave Book Cover" />
     </div>
-    <div class="book-details fade-up">
-      <p class="book-series">The Roaming Pawsâ„¢ : Yosemite Â· Book 1</p>
+    <div class="book-details">
+      <p class="book-series">The Roaming Paws&trade; : Yosemite &mdash; Book 1</p>
       <h3 class="book-title">Luna Finds Her Brave</h3>
       <div class="book-meta">
         <span><strong>50 Pages</strong>Hardcover &amp; Paperback</span>
-        <span><strong>Ages 3â€“7</strong>Children's Picture Book</span>
-        <span><strong>8.5" Ã— 8.5"</strong>Full-Color Illustrations</span>
+        <span><strong>Ages 3&ndash;7</strong>Children's Picture Book</span>
+        <span><strong>8.5&Prime; &times; 8.5&Prime;</strong>Full-Color Illustrations</span>
       </div>
-      <p class="book-blurb">Luna is a small dog with a big heart â€” playful, curious, and just a little bit afraid of the unknown.<br><br>When Oliver leads her deep into the wild beauty of Yosemite â€” through ancient forests, rushing rivers, and beneath the most breathtaking skies she has ever seen â€” Luna discovers something far greater than the journey itself.<br><br><em>It's the quiet decision to keep going anyway.</em></p>
+      <div class="book-blurb">
+        <p>Luna is a small dog with a big heart &mdash; playful, curious, and just a little bit afraid of the unknown.</p>
+        <br>
+        <p>When Oliver leads her deep into the wild beauty of Yosemite &mdash; through ancient forests, rushing rivers, and beneath the most breathtaking skies she has ever seen &mdash; Luna discovers something far greater than the journey itself.</p>
+        <br>
+        <p><em>It's the quiet decision to keep going anyway.</em></p>
+      </div>
       <div class="book-buy">
         <a href="#" class="btn-primary">Buy on Amazon</a>
         <a href="#" class="btn-secondary">Preview Inside</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK 2 - COMING SOON TEASER -->
+  <div class="book2-teaser fade-up">
+    <div class="book2-teaser-inner">
+      <div class="book2-cover-wrap">
+        <img src="images/book2_cover.png" alt="Luna Finds Her Joy &mdash; Coming Soon" />
+        <span class="book2-coming-badge">Coming Soon</span>
+      </div>
+      <div class="book2-text">
+        <span class="book-series">The Roaming Paws&trade; : Lake Tahoe &mdash; Book 2</span>
+        <h3 class="book-title">Luna Finds Her Joy</h3>
+        <p class="book-blurb">When Oliver brings Luna to Lake Tahoe in the heart of winter &mdash; where the mountains are white, the pines are heavy with snow, and the world feels perfectly still &mdash; Luna discovers that sometimes the coldest days hold the most warmth.</p>
+        <p style="font-family:'Inter',sans-serif; font-size:0.82rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-top:20px;">Coming soon &mdash; sign up below to be the first to know.</p>
+        <div style="margin-top:24px;">
+          <a href="#newsletter" class="btn-secondary">Notify Me</a>
+        </div>
       </div>
     </div>
   </div>
@@ -502,9 +532,9 @@
 
 <!-- SHOP -->
 <section id="shop">
-  <span class="section-badge fade-up">âœ¦ The Shop</span>
+  <span class="section-badge fade-up">The Shop</span>
   <h2 class="section-title fade-up">Bring the Adventure Home</h2>
-  <p class="section-subtitle fade-up">The real photographs behind every place Luna visited â€” available as fine art prints, canvas wraps, and more.</p>
+  <p class="section-subtitle fade-up">The real photographs behind every place Luna visited &mdash; available as fine art prints, canvas wraps, and more.</p>
   <div class="shop-grid">
     <div class="shop-card fade-up">
       <div class="shop-card-img">
@@ -524,7 +554,7 @@
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Tenaya Lake Reflection</h3>
-        <p class="shop-card-desc">Crystal-clear alpine lake surrounded by granite peaks â€” a moment of perfect stillness.</p>
+        <p class="shop-card-desc">Crystal-clear alpine lake surrounded by granite peaks &mdash; a moment of perfect stillness.</p>
         <p class="shop-card-price">From $34.99 <span>/ print</span></p>
       </div>
     </div>
@@ -544,7 +574,7 @@
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Golden Hour Valley</h3>
-        <p class="shop-card-desc">The entire Yosemite Valley bathed in warm golden light â€” pure magic.</p>
+        <p class="shop-card-desc">The entire Yosemite Valley bathed in warm golden light &mdash; pure magic.</p>
         <p class="shop-card-price">From $34.99 <span>/ print</span></p>
       </div>
     </div>
@@ -554,32 +584,32 @@
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Merced River Morning</h3>
-        <p class="shop-card-desc">Cold, fast, and full of life â€” the Merced River at its most wild and beautiful.</p>
+        <p class="shop-card-desc">Cold, fast, and full of life &mdash; the Merced River at its most wild and beautiful.</p>
         <p class="shop-card-price">From $34.99 <span>/ print</span></p>
       </div>
     </div>
     <div class="shop-card fade-up">
-      <div class="shop-card-img" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1457 100%); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px;">
-        <span style="font-size:3rem;">ðŸ§©</span>
+      <div class="shop-card-img" style="background: linear-gradient(135deg, #1a0a2e 0%, #2d1457 100%); flex-direction:column; gap:12px;">
+        <span style="font-size:3rem;">&#129513;</span>
         <span style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:0.9rem; text-align:center; padding:0 20px;">Premium Puzzle</span>
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Yosemite Puzzle</h3>
-        <p class="shop-card-desc">500-piece premium jigsaw puzzle featuring Luna's favourite Yosemite scenes.</p>
+        <p class="shop-card-desc">500-piece premium jigsaw puzzle featuring Luna's favorite Yosemite scenes.</p>
         <p class="shop-card-price">From $49.99 <span>/ puzzle</span></p>
       </div>
     </div>
   </div>
   <div class="shop-cta-wrap fade-up">
     <a href="#" class="btn-primary">View All Products</a>
-    <p class="shop-note">All prints shipped worldwide Â· Museum-quality materials Â· 100% satisfaction guarantee</p>
+    <p class="shop-note">All prints shipped worldwide &nbsp;&middot;&nbsp; Museum-quality materials &nbsp;&middot;&nbsp; 100% satisfaction guarantee</p>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <span class="section-badge fade-up">âœ¦ Our Story</span>
-  <h2 class="section-title fade-up">About The Roaming Pawsâ„¢</h2>
+  <span class="section-badge fade-up">Our Story</span>
+  <h2 class="section-title fade-up">About The Roaming Paws&trade;</h2>
   <div class="section-divider"></div>
   <div class="about-inner">
     <div class="about-img-wrap fade-up">
@@ -588,13 +618,13 @@
     </div>
     <div class="about-text fade-up">
       <div class="about-body">
-        <p>The Roaming Pawsâ„¢ was born at the intersection of all the things we love most â€” photography, technology, family, and a small dog named Luna who changed everything.</p>
+        <p>The Roaming Paws&trade; was born at the intersection of all the things we love most &mdash; photography, technology, family, and a small dog named Luna who changed everything.</p>
         <p>Before Luna arrived, Oliver had already been everywhere. By car, by plane, across mountains and cities and places most people only dream of visiting. A loyal companion on every journey, quietly taking it all in.</p>
-        <p>Then Luna came along â€” and the adventures got a lot louder.</p>
+        <p>Then Luna came along &mdash; and the adventures got a lot louder.</p>
         <p>Every place in these stories is real. Every photograph was taken with care. And every story was written with the hope that somewhere, a small reader decides to be just a little bit braver today.</p>
-        <p><em>These stories are about discovering the world â€” and discovering yourself along the way.</em></p>
+        <p><em>These stories are about discovering the world &mdash; and discovering yourself along the way.</em></p>
       </div>
-      <span class="about-sig">â€” The Roaming Pawsâ„¢ Creator</span>
+      <span class="about-sig">&mdash; The Roaming Paws&trade; Creator</span>
     </div>
   </div>
 </section>
@@ -602,8 +632,8 @@
 <!-- NEWSLETTER -->
 <section id="newsletter">
   <div class="newsletter-inner fade-up">
-    <span class="newsletter-paw">ðŸ¾</span>
-    <span class="section-badge">âœ¦ Stay in the Loop</span>
+    <span class="newsletter-paw">&#128062;</span>
+    <span class="section-badge">Stay in the Loop</span>
     <h2 class="section-title">Join the Adventure</h2>
     <p class="section-subtitle">Be the first to know about new books, new destinations, and exclusive prints.</p>
     <div class="newsletter-form">
@@ -616,7 +646,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <span class="section-badge fade-up">âœ¦ Get in Touch</span>
+  <span class="section-badge fade-up">Get in Touch</span>
   <h2 class="section-title fade-up">Contact Us</h2>
   <div class="section-divider"></div>
   <div class="contact-inner fade-up">
@@ -639,21 +669,21 @@
         <label class="form-label">Message</label>
         <textarea class="form-textarea" placeholder="Tell us about your adventure..."></textarea>
       </div>
-      <a href="#" class="btn-primary" style="width:fit-content;">Send Message âœ¦</a>
+      <a href="#" class="btn-primary" style="width:fit-content;">Send Message</a>
     </form>
     <div class="contact-info">
       <div class="contact-item">
-        <span class="contact-item-icon">ðŸ“¸</span>
+        <span class="contact-item-icon">&#128248;</span>
         <span class="contact-item-label">Instagram</span>
         <span class="contact-item-val">@theroamingpaws</span>
       </div>
       <div class="contact-item">
-        <span class="contact-item-icon">ðŸŒ</span>
+        <span class="contact-item-icon">&#127760;</span>
         <span class="contact-item-label">Website</span>
         <span class="contact-item-val">theroamingpaws.com</span>
       </div>
       <div class="contact-item">
-        <span class="contact-item-icon">ðŸ“§</span>
+        <span class="contact-item-icon">&#128231;</span>
         <span class="contact-item-label">Email</span>
         <span class="contact-item-val">hello@theroamingpaws.com</span>
       </div>
@@ -663,33 +693,27 @@
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-logo">The Roaming Pawsâ„¢</p>
+  <p class="footer-logo">The Roaming Paws&trade;</p>
   <p class="footer-tagline">Adventure stories for little explorers.</p>
   <ul class="footer-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#book">Book</a></li>
+    <li><a href="#book">Books</a></li>
     <li><a href="#shop">Shop</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <p class="footer-copy">Â© 2026 Marin Creative Solutions LLC Â· The Roaming Pawsâ„¢ is a brand of Marin Creative Solutions LLC Â· All rights reserved.</p>
+  <p class="footer-copy">&copy; 2026 Marin Creative Solutions LLC &nbsp;&middot;&nbsp; The Roaming Paws&trade; is a brand of Marin Creative Solutions LLC &nbsp;&middot;&nbsp; All rights reserved.</p>
 </footer>
 
 <script>
-  // Navbar scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 60);
   });
-
-  // Fade up on scroll
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
-
