@@ -457,7 +457,7 @@
     .nav-links { display: none; }
     .nav-hamburger {
       display: flex; flex-direction: column; justify-content: center; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 6px; z-index: 1100;
+      background: none; border: none; cursor: pointer; padding: 6px; z-index: 10000;
     }
     .nav-hamburger span {
       display: block; width: 24px; height: 2px;
@@ -468,10 +468,12 @@
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .nav-links.open {
       display: flex !important; flex-direction: column;
-      position: fixed; inset: 0; background: rgba(13,5,32,0.97);
-      z-index: 1000; align-items: center; justify-content: center; gap: 36px;
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(13,5,32,0.99);
+      z-index: 9999; align-items: center; justify-content: center; gap: 28px;
+      padding-top: 0;
     }
-    .nav-links.open li a { font-size: 1.4rem; letter-spacing: 3px; }
+    .nav-links.open li a { font-size: 1.3rem; letter-spacing: 3px; color: var(--cream); }
     .nav-links.open .nav-dropdown { display: none; }
     section { padding: 70px 24px; }
     #home { padding: 100px 24px 70px; }
@@ -482,7 +484,7 @@
     .contact-row { grid-template-columns: 1fr; }
     .newsletter-form { flex-direction: column; }
     footer { padding: 40px 24px 24px; }
-    .coming-soon-badge { padding: 8px 14px; font-size: 0.68rem; letter-spacing: 2px; }
+    .coming-soon-badge { padding: 8px 14px; font-size: 0.68rem; letter-spacing: 1px; white-space: nowrap; }
   }
 </style>
 </head>
