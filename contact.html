@@ -187,10 +187,15 @@
     <h2>Join the Adventure</h2>
     <p>Be the first to know about new books, new destinations, and exclusive prints.</p>
     <div id="newsletter-form">
-      <!-- Microsoft Form will be embedded here -->
-      <div style="background:rgba(212,168,67,0.08);border:1.5px dashed rgba(212,168,67,0.35);border-radius:16px;padding:40px 30px;">
-        <p style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);margin-bottom:10px;">Newsletter sign-up coming soon!</p>
-        <p style="font-family:'Lora',serif;font-size:0.9rem;color:rgba(253,246,232,0.55);">In the meantime, follow us on Instagram @theroamingpaws</p>
+      <form id="nl-form-contact" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+        <input type="email" id="nl-email-contact" placeholder="your@email.com" required
+          style="flex:1;min-width:200px;padding:14px 20px;border-radius:30px;border:1.5px solid rgba(212,168,67,0.3);background:rgba(255,255,255,0.05);color:#fdf6e8;font-family:'Lora',serif;font-size:0.95rem;outline:none;" />
+        <button type="submit" id="nl-btn-contact"
+          style="padding:14px 28px;border-radius:30px;background:linear-gradient(135deg,#d4a843,#f0c866);color:#1a0a2e;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;">Join the List</button>
+      </form>
+      <div id="nl-success-contact" style="display:none;background:rgba(212,168,67,0.08);border:1.5px solid rgba(212,168,67,0.35);border-radius:16px;padding:24px 30px;text-align:center;margin-top:12px;">
+        <p style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#f0c866;margin-bottom:6px;">You're on the list! 🐾</p>
+        <p style="font-family:'Lora',serif;font-size:0.9rem;color:rgba(253,246,232,0.55);">We'll let you know the moment something new drops.</p>
       </div>
     </div>
     <p style="font-family:'Inter',sans-serif;font-size:0.75rem;color:rgba(253,246,232,0.3);margin-top:20px;">No spam, ever. Only real adventures. Unsubscribe anytime.</p>
@@ -214,6 +219,37 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.getElementById('nl-form-contact').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('nl-email-contact').value;
+    const btn = document.getElementById('nl-btn-contact');
+    btn.textContent = 'Subscribing...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZjM4ZmJhMzIwZmYzMDhjOGFjOWNiMDA2ZWVjMmM3NGY1MGY5YTljNmI3ZDdlZDRkMTlkNTU4Yjc4OGE3NTY4NjA3OTM2NjYwZGM3ZGZhYmMiLCJpYXQiOjE3ODE0OTUwNTUuNDk0NDk0LCJuYmYiOjE3ODE0OTUwNTUuNDk0NDk2LCJleHAiOjQ5MzcxNjg2NTUuNDkwODc5LCJzdWIiOiIyNDYxODM5Iiwic2NvcGVzIjpbXX0.TKREp3pygWBK8WvJi5AK71vcu6R6nEXCK3pGdV8N3-QAt5Vyv4EhCzgeMmYOGR8p0C6RhUpo6OcHnt0Du1mwSTYpzWas5kseXaMrB5xcxuznzwOIE9Rfu-8lMLu1wEqT503-ZHv2Gu7TQy-2JH4SN1us34MjAiB8BQu87rpp3uWv6uGgqzNeLltsVZ1AaesqdSJpvmaDKS3vNtXxpwJNvzoHSQ9zd8WazFpMm0qBL6Nexf7-CDvhQeuia52pMNFTCKzEoPynnbsTAp7totd5IdaDXSfBxrT8VqCeC1QVEPdLLmkFgtrm3z1wYsXqI7V2mhDIjtWPY_psspjDqEqJJB_OP8Ynf9WLpAlpPhKtqXyIqeuGvUZWGCvsagYQXwBX1PHhIG5TjC-nuutlC9Ehi-vkS6QZS7m-aVHtOvQ_fw7C5b485lbyGDaBeftmJ7gx3fg8F1JHd-_qfE2QqpbGiIwTaxC4y4sBA0mSCVlsW0iGAZXo8IaLnURhG74n5ZnjAnGRa0NsiVZmbOuCwaSkZ2bNlTDOJS05WvJsw_zDLWPjCi0Iy0UWvG4dLLdp5D98WvrUXd650LjY6V6Imm3NYaaZhOGCU8QQhowK87pZU8WyIMAt-XUH2F24rjDi3-wIhl1n6H44AVHWy3n3MUTBbsVtBOHv2mmQq9Q-RZ6SizM'
+        },
+        body: JSON.stringify({ email: email, groups: ['190311560655144754'] })
+      });
+      if (res.ok || res.status === 200 || res.status === 201) {
+        document.getElementById('nl-form-contact').style.display = 'none';
+        document.getElementById('nl-success-contact').style.display = 'block';
+      } else {
+        btn.textContent = 'Join the List';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      btn.textContent = 'Join the List';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    }
+  });
 
   document.querySelector('.contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
