@@ -61,15 +61,138 @@
   main { padding: 80px 60px; max-width: 1100px; margin: 0 auto; }
 
   .about-inner { display: grid; grid-template-columns: 420px 1fr; gap: 80px; align-items: start; }
-  .about-img-wrap { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
-  .about-img-wrap img { width: 100%; display: block; }
-  .about-img-accent { position: absolute; inset: 0; border: 2px solid rgba(212,168,67,0.2); border-radius: 16px; pointer-events: none; }
+  .about-img-wrap {
+    position: relative;
+    border-radius: 24px;
+    background: radial-gradient(circle at center, rgba(212,168,67,0.18) 0%, rgba(45,20,87,0.4) 60%, transparent 100%);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212,168,67,0.15);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 0 30px rgba(212,168,67,0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .about-img-wrap:hover {
+    border-color: rgba(212,168,67,0.3);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 30px rgba(212,168,67,0.1), inset 0 0 30px rgba(212,168,67,0.05);
+  }
+  .about-img-wrap img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.8)) drop-shadow(0 0 15px rgba(212,168,67,0.12));
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .about-img-wrap:hover img {
+    transform: scale(1.04) translateY(-8px);
+  }
 
   .about-body p { font-size: 1.05rem; line-height: 2; color: rgba(253,246,232,0.75); margin-bottom: 22px; }
   .about-body em { color: var(--gold-pale); font-style: italic; }
   .about-sig { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: var(--gold); margin-top: 32px; }
 
-  footer { background: #0a0518; padding: 60px 60px 30px; text-align: center; border-top: 1px solid rgba(212,168,67,0.1); }
+  /* MEET THE PACK SECTION */
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cream);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .section-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+    margin: 0 auto 40px;
+    border-radius: 2px;
+  }
+  .pack-section {
+    margin-top: 100px;
+  }
+  .pack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .pack-card {
+    background: rgba(45, 20, 87, 0.25);
+    border: 1px solid rgba(212, 168, 67, 0.12);
+    border-radius: 16px;
+    padding: 36px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+  }
+  .pack-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 168, 67, 0.35);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  }
+  .pack-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(253, 246, 232, 0.1);
+    padding-bottom: 12px;
+  }
+  .pack-badge {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+  .pack-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(253, 246, 232, 0.5);
+  }
+  .pack-desc {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: rgba(253, 246, 232, 0.75);
+  }
+
+  /* BTS SECTION */
+  .bts-section {
+    margin-top: 100px;
+    background: linear-gradient(180deg, transparent 0%, rgba(10,5,24,0.6) 100%);
+    padding: 60px 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(212, 168, 67, 0.08);
+  }
+  .bts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .bts-item {
+    text-align: center;
+  }
+  .bts-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 5px 15px rgba(212,168,67,0.2));
+  }
+  .bts-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+  }
+  .bts-item p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(253, 246, 232, 0.7);
+  }
+
+  footer { background: #0a0518; padding: 60px 60px 30px; text-align: center; border-top: 1px solid rgba(212, 168, 67, 0.1); }
   .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 8px; }
   .footer-tagline { font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: rgba(253,246,232,0.4); margin-bottom: 28px; }
   .footer-links { display: flex; gap: 32px; justify-content: center; list-style: none; margin-bottom: 30px; }
@@ -85,6 +208,9 @@
     .page-hero { padding: 120px 24px 60px; }
     main { padding: 60px 24px; }
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    .pack-grid { grid-template-columns: 1fr; gap: 24px; }
+    .bts-grid { grid-template-columns: 1fr; gap: 40px; }
+    .bts-section { padding: 40px 20px; }
     footer { padding: 40px 24px 24px; }
   }
 </style>
@@ -119,8 +245,7 @@
 <main>
   <div class="about-inner">
     <div class="about-img-wrap fade-up">
-      <img src="images/luna_about.jpg" alt="Luna, the real dog behind The Roaming Paws" />
-      <div class="about-img-accent"></div>
+      <img src="images/luna-real.png" alt="Luna, the real dog behind The Roaming Paws" />
     </div>
     <div class="about-text fade-up">
       <div class="about-body">
@@ -133,6 +258,53 @@
       <span class="about-sig">&mdash; The Roaming Paws&trade; Creator</span>
     </div>
   </div>
+
+  <!-- Meet the Pack Section -->
+  <section class="pack-section fade-up">
+    <h2 class="section-title">Meet the Adventurers</h2>
+    <div class="section-divider"></div>
+    <div class="pack-grid">
+      <div class="pack-card">
+        <div class="pack-card-header">
+          <span class="pack-badge">Luna</span>
+          <span class="pack-subtitle">The Trailblazer</span>
+        </div>
+        <p class="pack-desc">A playful, curious Maltese-Poodle mix who is full of energy and just a little bit afraid of the unknown. The real Luna loves hiking national parks, chasing pinecones, and convincing everyone she meets to give her a treat. She is the voice of curiosity and bravery in our stories.</p>
+      </div>
+      <div class="pack-card">
+        <div class="pack-card-header">
+          <span class="pack-badge">Oliver</span>
+          <span class="pack-subtitle">The Guide</span>
+        </div>
+        <p class="pack-desc">The seasoned explorer who paved the way. Wise, calm, and incredibly loyal, Oliver traveled thousands of miles across mountains, lakes, and forests. Though he is no longer with us on the physical trails, his adventurous spirit guides every single story we write.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Philosophy Section -->
+  <section class="bts-section fade-up">
+    <div class="bts-content">
+      <h2 class="section-title">Our Philosophy</h2>
+      <div class="section-divider"></div>
+      <div class="bts-grid">
+        <div class="bts-item">
+          <span class="bts-icon">🏔️</span>
+          <h3>Real Locations</h3>
+          <p>Every mountain peak, lake shore, and forest path shown in our books is a real place. We hike these trails ourselves to capture their true magic, bridging the gap between child readers and the great outdoors.</p>
+        </div>
+        <div class="bts-item">
+          <span class="bts-icon">📸</span>
+          <h3>Real Photography</h3>
+          <p>Instead of fully illustrated landscapes, our books feature real-world photography integrated with custom illustrations. This unique style inspires kids to look at the real world with a sense of wonder and curiosity.</p>
+        </div>
+        <div class="bts-item">
+          <span class="bts-icon">💛</span>
+          <h3>Emotional Growth</h3>
+          <p>Luna's adventures teach little ones that it's okay to feel nervous or afraid. True bravery isn't about having no fear; it's about taking that next step on the trail even when you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
