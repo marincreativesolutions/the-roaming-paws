@@ -84,14 +84,12 @@
   .coming-soon-badge { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); border: 1.5px solid rgba(212,168,67,0.4); padding: 12px 28px; border-radius: 30px; background: rgba(212,168,67,0.06); }
   .coming-soon-text { font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: rgba(253,246,232,0.45); }
 
-  /* AUTHOR NOTE */
+  /* BEHIND THE STORY - text only, no image */
   .author-section { border-top: 1px solid rgba(212,168,67,0.12); padding-top: 80px; margin-bottom: 80px; }
-  .author-inner { display: grid; grid-template-columns: 280px 1fr; gap: 70px; align-items: start; }
-  .author-img-wrap { border-radius: 14px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); position: relative; }
-  .author-img-wrap img { width: 100%; display: block; }
-  .author-img-accent { position: absolute; inset: 0; border: 2px solid rgba(212,168,67,0.15); border-radius: 14px; pointer-events: none; }
-  .author-label { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
-  .author-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--cream); margin-bottom: 28px; }
+  .author-inner { max-width: 780px; margin: 0 auto; }
+  .author-label { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; text-align: center; }
+  .author-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--cream); margin-bottom: 36px; text-align: center; }
+  .author-divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%); margin: 0 auto 40px; border-radius: 2px; }
   .author-body p { font-size: 1rem; line-height: 2; color: rgba(253,246,232,0.72); margin-bottom: 20px; }
   .author-body em { color: var(--gold-pale); font-style: italic; }
   .author-sig { display: block; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: var(--gold); margin-top: 28px; }
@@ -113,7 +111,6 @@
     .page-hero { padding: 120px 24px 60px; }
     main { padding: 60px 24px; }
     .book-showcase { grid-template-columns: 1fr; gap: 40px; }
-    .author-inner { grid-template-columns: 1fr; gap: 36px; }
     footer { padding: 40px 24px 24px; }
   }
 </style>
@@ -141,7 +138,7 @@
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-content">
-    <span class="section-badge">The Roaming Paws&trade; &mdash; Book 1</span>
+    <span class="section-badge">The Roaming Paws&trade;: Yosemite &mdash; Book 1</span>
     <h1>Luna Finds Her Brave</h1>
     <p>A Yosemite Adventure</p>
   </div>
@@ -161,7 +158,7 @@
       <p class="book-subtitle">A Yosemite Adventure</p>
       <div class="book-specs">
         <div class="book-spec"><span class="book-spec-label">Pages</span><span class="book-spec-value">50</span></div>
-        <div class="book-spec"><span class="book-spec-label">Age Range</span><span class="book-spec-value">3 &ndash; 7</span></div>
+        <div class="book-spec"><span class="book-spec-label">Age Range</span><span class="book-spec-value">3 &ndash; 11</span></div>
         <div class="book-spec"><span class="book-spec-label">Format</span><span class="book-spec-value">Hardcover &amp; Paperback</span></div>
         <div class="book-spec"><span class="book-spec-label">Size</span><span class="book-spec-value">8.5&Prime; &times; 8.5&Prime;</span></div>
         <div class="book-spec"><span class="book-spec-label">Illustrations</span><span class="book-spec-value">Full Color</span></div>
@@ -178,25 +175,18 @@
     </div>
   </div>
 
-  <!-- AUTHOR NOTE -->
+  <!-- BEHIND THE STORY -->
   <div class="author-section fade-up">
     <div class="author-inner">
-      <div class="author-img-wrap">
-        <img src="../images/luna_about.jpg" alt="Luna, the real dog behind The Roaming Paws" />
-        <div class="author-img-accent"></div>
+      <span class="author-label">Behind the Story</span>
+      <h2 class="author-title">A Note from the Creator</h2>
+      <div class="author-divider"></div>
+      <div class="author-body">
+        <p>Living in California awakened something in me I didn't know was there &mdash; a hunger to explore. When I bought my first professional camera, I had no idea what I was doing. No formal training, no mentor, just a camera in my hands and the vast, breathtaking landscapes of California stretching out in every direction. What followed was a journey of trial and error, of learning from others online, of tinkering endlessly with settings I barely understood. Slowly, through patience and curiosity, I found a new love: capturing the perfect scenes that nature so generously puts on display.</p>
+        <p>Yosemite was the turning point. Nothing could have prepared me for the sheer scale of it &mdash; the dimensions, the wilderness, the way the granite walls made me feel wonderfully small. It was there that I attempted my first long exposure photography of one of its iconic lakes, the still water holding a mirror up to the sky. And then came the night that changed everything. Driving through Yosemite after dark, I took a wrong turn and found myself parked somewhere deep in the valley &mdash; no signal, no light, so dark I could not see my own hand in front of my face. Instead of turning back, I set up my camera, opened the shutter, and let the darkness speak. What came back on the screen stopped my breath: a sky absolutely alive with stars, the Milky Way arching overhead in a way I had only ever seen in other people's photographs. They weren't perfect shots by any technical standard &mdash; but they were <em>mine</em>, and they were the moment I truly understood what a camera could do.</p>
+        <p>Then came the golden hour at Half Dome &mdash; the granite face ablaze in amber and rose, colors I had no words for but somehow managed to capture. Standing there, I knew I had found something worth sharing. What I didn't know yet was <em>how</em>. Then a puppy arrived &mdash; all energy, curiosity, and unfiltered joy &mdash; and everything clicked into place. Here was the perfect creative collision: the sweeping landscapes I had fallen in love with, the photography that had become my obsession, and the irresistible personality of a tiny dog who approached the world with the same wide-eyed wonder I had once felt staring through a viewfinder for the first time. The idea was simple and, I believed, powerful &mdash; use Luna's charm and character to pull young readers into real places, real stories, and real beauty. To entertain through cuteness, and to educate through the lens. To let children fall in love with the world the same way I did &mdash; one breathtaking frame at a time.</p>
       </div>
-      <div class="author-text">
-        <span class="author-label">Behind the Story</span>
-        <h2 class="author-title">A Note from the Creator</h2>
-        <div class="author-body">
-          <p>The Roaming Paws&trade; was born at the intersection of all the things we love most &mdash; photography, technology, family, and a small dog named Luna who changed everything.</p>
-          <p>Before Luna arrived, Oliver had already been everywhere. By car, by plane, across mountains and cities and places most people only dream of visiting. A loyal companion on every journey, quietly taking it all in.</p>
-          <p>Then Luna came along &mdash; and the adventures got a lot louder.</p>
-          <p>Every place in these stories is real. Every photograph was taken with care. And every story was written with the hope that somewhere, a small reader decides to be just a little bit braver today.</p>
-          <p><em>These stories are about discovering the world &mdash; and discovering yourself along the way.</em></p>
-        </div>
-        <span class="author-sig">&mdash; The Roaming Paws&trade; Creator</span>
-      </div>
+      <span class="author-sig">&mdash; The Roaming Paws&trade; Creator</span>
     </div>
   </div>
 
