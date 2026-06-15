@@ -449,6 +449,8 @@
 
   /* HAMBURGER — hidden on desktop */
   .nav-hamburger { display: none; }
+  /* MOBILE MENU — hidden by default, shown only on mobile */
+  .mobile-menu { display: none; }
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
@@ -466,15 +468,25 @@
     .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .nav-links.open {
-      display: flex !important; flex-direction: column;
+    .mobile-menu.open {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(13,5,32,0.99);
-      z-index: 9999; align-items: center; justify-content: center; gap: 28px;
-      padding-top: 0;
+      background: #0a0520; z-index: 9999;
     }
-    .nav-links.open li a { font-size: 1.3rem; letter-spacing: 3px; color: var(--cream); }
-    .nav-links.open .nav-dropdown { display: none; }
+    .mobile-menu ul { list-style: none; padding: 0; margin: 0; width: 100%; text-align: center; }
+    .mobile-menu ul li { border-bottom: 1px solid rgba(212,168,67,0.12); }
+    .mobile-menu ul li:first-child { border-top: 1px solid rgba(212,168,67,0.12); }
+    .mobile-menu ul li a {
+      display: block; padding: 20px 48px;
+      font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(253,246,232,0.85); text-decoration: none; transition: color 0.2s;
+    }
+    .mobile-menu ul li a:active { color: var(--gold-light); }
+    .mobile-menu ul li.sub-item a {
+      font-size: 0.7rem; letter-spacing: 3px;
+      color: rgba(253,246,232,0.4); padding: 14px 48px;
+    }
     section { padding: 70px 24px; }
     #home { padding: 100px 24px 70px; }
     .hero-inner, .book-inner, .about-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -516,6 +528,19 @@
     <span></span>
   </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li class="sub-item"><a href="books/yosemite.html">Yosemite</a></li>
+    <li class="sub-item"><a href="books/laketahoe.html">Lake Tahoe</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section id="home">
@@ -838,16 +863,16 @@
   });
 
   const navToggle = document.getElementById('navToggle');
-  const navLinks = document.querySelector('.nav-links');
-  if (navToggle) {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (navToggle && mobileMenu) {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
     });
-    navLinks.querySelectorAll('a').forEach(link => {
+    mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.classList.remove('open');
-        navLinks.classList.remove('open');
+        mobileMenu.classList.remove('open');
       });
     });
   }
