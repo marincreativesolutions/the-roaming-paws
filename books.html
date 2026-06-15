@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books &mdash; The Roaming Paws&trade;</title>
+<meta name="description" content="Explore The Roaming Paws&trade; children's book series. Real adventures, real places, and one very real dog named Luna. Shop Luna Finds Her Brave and upcoming titles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple-deep:  #1a0a2e;
+    --purple-mid:   #2d1457;
+    --purple-light: #4a2080;
+    --gold:         #d4a843;
+    --gold-light:   #f0c866;
+    --gold-pale:    #fdeebb;
+    --cream:        #fdf6e8;
+    --white:        #ffffff;
+    --grad-hero: linear-gradient(160deg, #0d0520 0%, #2d1457 40%, #1a3a6e 80%, #0d2040 100%);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', serif;
+    background: var(--purple-deep);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 60px;
+    background: rgba(13,5,32,0.97);
+    backdrop-filter: blur(8px);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  .nav-logo span { font-style: italic; font-weight: 400; color: var(--gold-pale); font-size: 0.85rem; display: block; letter-spacing: 3px; text-transform: uppercase; }
+
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500;
+    color: rgba(253,246,232,0.75); letter-spacing: 2px; text-transform: uppercase;
+    text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+
+  .nav-cta {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 10px 24px; border-radius: 30px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--purple-deep); text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(212,168,67,0.35);
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,168,67,0.5); }
+
+  /* PAGE HERO BANNER */
+  .page-hero {
+    min-height: 38vh;
+    background: var(--grad-hero);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 140px 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(212,168,67,0.12) 0%, transparent 70%);
+  }
+  .page-hero-content { position: relative; z-index: 2; }
+  .page-hero .section-badge {
+    display: inline-block;
+    font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 4px; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(212,168,67,0.4);
+    padding: 6px 18px; border-radius: 20px;
+    background: rgba(212,168,67,0.08); margin-bottom: 20px;
+  }
+  .page-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700; color: var(--cream);
+    line-height: 1.15; margin-bottom: 16px;
+  }
+  .page-hero p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem; color: rgba(253,246,232,0.65);
+    max-width: 580px; margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* MAIN CONTENT */
+  main { padding: 80px 60px; max-width: 1200px; margin: 0 auto; }
+
+  /* BOOK CARD */
+  .book-inner {
+    display: grid; grid-template-columns: 340px 1fr;
+    gap: 80px; align-items: center;
+    margin-bottom: 100px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(212,168,67,0.12);
+  }
+  .book-inner:last-of-type { border-bottom: none; }
+
+  .book-cover-wrap {
+    position: relative;
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,168,67,0.15);
+  }
+  .book-cover-wrap img { width: 100%; display: block; }
+
+  .book-series {
+    font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 4px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px; display: block;
+  }
+  .book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem; font-weight: 700;
+    color: var(--cream); line-height: 1.2; margin-bottom: 24px;
+  }
+  .book-meta {
+    display: flex; flex-wrap: wrap; gap: 20px;
+    margin-bottom: 28px;
+  }
+  .book-meta span {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem;
+    color: rgba(253,246,232,0.55); display: flex; flex-direction: column; gap: 2px;
+  }
+  .book-meta strong {
+    font-weight: 600; color: var(--gold-light);
+    display: block; font-size: 0.82rem;
+  }
+  .book-blurb p {
+    font-size: 1rem; line-height: 1.9;
+    color: rgba(253,246,232,0.75); margin-bottom: 12px;
+  }
+  .book-blurb em { color: var(--gold-pale); font-style: italic; }
+  .book-buy { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 14px 32px; border-radius: 30px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--purple-deep);
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 24px rgba(212,168,67,0.4);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(212,168,67,0.55); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 13px 30px; border-radius: 30px;
+    border: 1.5px solid rgba(212,168,67,0.45);
+    color: var(--gold-light);
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none;
+    transition: all 0.25s;
+    background: rgba(212,168,67,0.06);
+  }
+  .btn-secondary:hover { background: rgba(212,168,67,0.15); border-color: var(--gold-light); }
+
+  /* BOOK 2 TEASER */
+  .book2-teaser {
+    background: linear-gradient(135deg, rgba(45,20,87,0.5) 0%, rgba(26,10,46,0.8) 100%);
+    border: 1px solid rgba(212,168,67,0.15);
+    border-radius: 20px; padding: 60px;
+  }
+  .book2-teaser-inner {
+    display: grid; grid-template-columns: 220px 1fr;
+    gap: 60px; align-items: center;
+  }
+  .book2-cover-wrap {
+    position: relative;
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .book2-cover-wrap img { width: 100%; display: block; }
+  .book2-coming-badge {
+    position: absolute; top: 12px; right: 12px;
+    font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    background: var(--gold); color: var(--purple-deep);
+    padding: 5px 12px; border-radius: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0a0518;
+    padding: 60px 60px 30px;
+    text-align: center;
+    border-top: 1px solid rgba(212,168,67,0.1);
+  }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--gold-light); margin-bottom: 8px;
+  }
+  .footer-tagline {
+    font-family: 'Lora', serif; font-style: italic;
+    font-size: 0.9rem; color: rgba(253,246,232,0.4);
+    margin-bottom: 28px;
+  }
+  .footer-links {
+    display: flex; gap: 32px; justify-content: center;
+    list-style: none; margin-bottom: 30px;
+  }
+  .footer-links a {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem;
+    color: rgba(253,246,232,0.45); letter-spacing: 2px;
+    text-transform: uppercase; text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold-light); }
+  .footer-copy {
+    font-family: 'Inter', sans-serif; font-size: 0.72rem;
+    color: rgba(253,246,232,0.25); line-height: 1.8;
+  }
+
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .page-hero { padding: 120px 24px 60px; }
+    main { padding: 60px 24px; }
+    .book-inner { grid-template-columns: 1fr; gap: 40px; }
+    .book2-teaser { padding: 36px 24px; }
+    .book2-teaser-inner { grid-template-columns: 1fr; gap: 32px; }
+    footer { padding: 40px 24px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    The Roaming Paws&trade;
+    <span>Adventure Stories</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="books.html" class="active">Books</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="books.html" class="nav-cta">Get the Book</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <span class="section-badge">The Series</span>
+    <h1>The Roaming Paws&trade; Books</h1>
+    <p>Every book is a real adventure. Every place is a real destination. Every story is for the brave little explorer in all of us.</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- BOOK 1 -->
+  <div class="book-inner fade-up">
+    <div class="book-cover-wrap">
+      <img src="images/cover_web.jpg" alt="Luna Finds Her Brave Book Cover" />
+    </div>
+    <div class="book-details">
+      <span class="book-series">The Roaming Paws&trade; : Yosemite &mdash; Book 1</span>
+      <h2 class="book-title">Luna Finds Her Brave</h2>
+      <div class="book-meta">
+        <span><strong>50 Pages</strong>Hardcover &amp; Paperback</span>
+        <span><strong>Ages 3&ndash;7</strong>Children's Picture Book</span>
+        <span><strong>8.5&Prime; &times; 8.5&Prime;</strong>Full-Color Illustrations</span>
+      </div>
+      <div class="book-blurb">
+        <p>Luna is a small dog with a big heart &mdash; playful, curious, and just a little bit afraid of the unknown.</p>
+        <br>
+        <p>When Oliver leads her deep into the wild beauty of Yosemite &mdash; through ancient forests, rushing rivers, and beneath the most breathtaking skies she has ever seen &mdash; Luna discovers something far greater than the journey itself.</p>
+        <br>
+        <p><em>It's the quiet decision to keep going anyway.</em></p>
+      </div>
+      <div class="book-buy">
+        <a href="#" class="btn-primary">Pre-order on Amazon</a>
+        <a href="#" class="btn-secondary">Preview Inside</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK 2 TEASER -->
+  <div class="book2-teaser fade-up">
+    <div class="book2-teaser-inner">
+      <div class="book2-cover-wrap">
+        <img src="images/book2_cover.png" alt="Luna Finds Her Joy &mdash; Coming Soon" />
+        <span class="book2-coming-badge">Coming Soon</span>
+      </div>
+      <div class="book2-text">
+        <span class="book-series">The Roaming Paws&trade; : Lake Tahoe &mdash; Book 2</span>
+        <h2 class="book-title">Luna Finds Her Joy</h2>
+        <div class="book-blurb">
+          <p>When Oliver brings Luna to Lake Tahoe in the heart of winter &mdash; where the mountains are white, the pines are heavy with snow, and the world feels perfectly still &mdash; Luna discovers that sometimes the coldest days hold the most warmth.</p>
+        </div>
+        <p style="font-family:'Inter',sans-serif; font-size:0.82rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-top:20px;">Coming soon &mdash; sign up to be the first to know.</p>
+        <div style="margin-top:24px;">
+          <a href="contact.html" class="btn-secondary">Notify Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">The Roaming Paws&trade;</p>
+  <p class="footer-tagline">Adventure stories for little explorers.</p>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 Marin Creative Solutions LLC &nbsp;&middot;&nbsp; The Roaming Paws&trade; is a brand of Marin Creative Solutions LLC &nbsp;&middot;&nbsp; All rights reserved.</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Photo Selection Gallery — The Roaming Paws</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #1a1a2e; color: #fff; padding: 20px; }
+  h1 { color: #d4a843; margin-bottom: 6px; }
+  h2 { color: #f0c866; margin: 30px 0 12px; border-bottom: 1px solid #d4a843; padding-bottom: 6px; }
+  p { color: #ccc; margin-bottom: 20px; font-size: 0.9rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .card {
+    background: #2a1a4e; border: 2px solid transparent; border-radius: 10px;
+    overflow: hidden; cursor: pointer; transition: all 0.2s;
+  }
+  .card:hover { border-color: #d4a843; transform: translateY(-3px); }
+  .card.selected { border-color: #f0c866; background: #3a2a5e; }
+  .card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+  .card-label {
+    padding: 8px 10px; font-size: 0.78rem; color: #ccc;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .card-label span { color: #d4a843; font-weight: bold; display: none; }
+  .card.selected .card-label span { display: block; }
+  #summary {
+    position: fixed; bottom: 20px; right: 20px;
+    background: #d4a843; color: #1a1a2e; padding: 14px 20px;
+    border-radius: 12px; font-weight: bold; font-size: 0.9rem;
+    max-width: 400px; word-break: break-all; display: none;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+<h1>📸 Photo Selection Gallery</h1>
+<p>Click photos to select them. <strong>Yosemite section:</strong> pick 5 for shop cards. <strong>Luna section:</strong> pick 1 for the About section. Selected filenames will appear at the bottom right.</p>
+
+<h2>🏔️ Yosemite Photos (pick 5 for Shop)</h2>
+<div class="grid">
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0235.jpg" loading="lazy"><div class="card-label">IMG_0235.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0236.jpg" loading="lazy"><div class="card-label">IMG_0236.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0244.jpg" loading="lazy"><div class="card-label">IMG_0244.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0248.jpg" loading="lazy"><div class="card-label">IMG_0248.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0249.jpg" loading="lazy"><div class="card-label">IMG_0249.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0256.jpg" loading="lazy"><div class="card-label">IMG_0256.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0260.jpg" loading="lazy"><div class="card-label">IMG_0260.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0269.jpg" loading="lazy"><div class="card-label">IMG_0269.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0324.jpg" loading="lazy"><div class="card-label">IMG_0324.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0458.jpg" loading="lazy"><div class="card-label">IMG_0458.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0499.jpg" loading="lazy"><div class="card-label">IMG_0499.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0533.jpg" loading="lazy"><div class="card-label">IMG_0533.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0534-Edit.jpg" loading="lazy"><div class="card-label">IMG_0534-Edit.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0560.jpg" loading="lazy"><div class="card-label">IMG_0560.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0570.jpg" loading="lazy"><div class="card-label">IMG_0570.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0575-Edit.jpg" loading="lazy"><div class="card-label">IMG_0575-Edit.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0576.jpg" loading="lazy"><div class="card-label">IMG_0576.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0580-Edit.jpg" loading="lazy"><div class="card-label">IMG_0580-Edit.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0584.jpg" loading="lazy"><div class="card-label">IMG_0584.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0587.jpg" loading="lazy"><div class="card-label">IMG_0587.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0588.jpg" loading="lazy"><div class="card-label">IMG_0588.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0590.jpg" loading="lazy"><div class="card-label">IMG_0590.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0594.jpg" loading="lazy"><div class="card-label">IMG_0594.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0618.jpg" loading="lazy"><div class="card-label">IMG_0618.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0625.jpg" loading="lazy"><div class="card-label">IMG_0625.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0629.jpg" loading="lazy"><div class="card-label">IMG_0629.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0643-Edit.jpg" loading="lazy"><div class="card-label">IMG_0643-Edit.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_0840.jpg" loading="lazy"><div class="card-label">IMG_0840.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5680.jpg" loading="lazy"><div class="card-label">IMG_5680.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5691.jpg" loading="lazy"><div class="card-label">IMG_5691.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5692.jpg" loading="lazy"><div class="card-label">IMG_5692.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5756.jpg" loading="lazy"><div class="card-label">IMG_5756.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5769.jpg" loading="lazy"><div class="card-label">IMG_5769.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5789.jpg" loading="lazy"><div class="card-label">IMG_5789.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5829.jpg" loading="lazy"><div class="card-label">IMG_5829.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5845.jpg" loading="lazy"><div class="card-label">IMG_5845.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5858.jpg" loading="lazy"><div class="card-label">IMG_5858.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5864.jpg" loading="lazy"><div class="card-label">IMG_5864.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5893.jpg" loading="lazy"><div class="card-label">IMG_5893.jpg <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/yosemite/IMG_5898.jpg" loading="lazy"><div class="card-label">IMG_5898.jpg <span>✓ SELECTED</span></div></div>
+</div>
+
+<h2>🐾 Luna Photos (pick 1 for About section)</h2>
+<div class="grid">
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_2155.JPEG" loading="lazy"><div class="card-label">IMG_2155.JPEG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8421.JPG" loading="lazy"><div class="card-label">IMG_8421.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8436.JPG" loading="lazy"><div class="card-label">IMG_8436.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8439.JPG" loading="lazy"><div class="card-label">IMG_8439.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8508.JPG" loading="lazy"><div class="card-label">IMG_8508.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8516.JPG" loading="lazy"><div class="card-label">IMG_8516.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8517.JPG" loading="lazy"><div class="card-label">IMG_8517.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8522.JPG" loading="lazy"><div class="card-label">IMG_8522.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8523.JPG" loading="lazy"><div class="card-label">IMG_8523.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8556.JPG" loading="lazy"><div class="card-label">IMG_8556.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8557.JPG" loading="lazy"><div class="card-label">IMG_8557.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8565.JPG" loading="lazy"><div class="card-label">IMG_8565.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8593.JPG" loading="lazy"><div class="card-label">IMG_8593.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8614.JPG" loading="lazy"><div class="card-label">IMG_8614.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8615.JPG" loading="lazy"><div class="card-label">IMG_8615.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8635.JPG" loading="lazy"><div class="card-label">IMG_8635.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8705.JPG" loading="lazy"><div class="card-label">IMG_8705.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8706.JPG" loading="lazy"><div class="card-label">IMG_8706.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8710.JPG" loading="lazy"><div class="card-label">IMG_8710.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8711.JPG" loading="lazy"><div class="card-label">IMG_8711.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8712.JPG" loading="lazy"><div class="card-label">IMG_8712.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8751.JPG" loading="lazy"><div class="card-label">IMG_8751.JPG <span>✓ SELECTED</span></div></div>
+  <div class="card" onclick="toggle(this)"><img src="../../photos/luna/IMG_8752.JPG" loading="lazy"><div class="card-label">IMG_8752.JPG <span>✓ SELECTED</span></div></div>
+</div>
+
+<div id="summary"></div>
+
+<script>
+  function toggle(card) {
+    card.classList.toggle('selected');
+    updateSummary();
+  }
+  function updateSummary() {
+    const selected = [...document.querySelectorAll('.card.selected')]
+      .map(c => c.querySelector('.card-label').childNodes[0].textContent.trim());
+    const el = document.getElementById('summary');
+    if (selected.length === 0) { el.style.display = 'none'; return; }
+    el.style.display = 'block';
+    el.innerHTML = '✓ Selected (' + selected.length + '):<br>' + selected.join('<br>');
+  }
+</script>
+</body>
+</html>
