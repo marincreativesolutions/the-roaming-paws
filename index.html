@@ -675,7 +675,6 @@
   <div class="contact-inner fade-up">
     <form class="contact-form" action="https://formspree.io/f/xjgdjnyw" method="POST">
       <input type="hidden" name="_subject" value="New message from The Roaming Paws website" />
-      <input type="hidden" name="_next" value="https://theroamingpaws.com/thankyou.html" />
       <div class="contact-row">
         <div class="form-group">
           <label class="form-label">Name</label>
@@ -739,6 +738,32 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type=submit]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        window.location.href = 'thankyou.html';
+      } else {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    }
+  });
 </script>
 </body>
 </html>
