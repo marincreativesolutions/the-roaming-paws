@@ -176,7 +176,9 @@
     color: rgba(253,246,232,0.75); margin-bottom: 12px;
   }
   .book-blurb em { color: var(--gold-pale); font-style: italic; }
-  .book-buy { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+  .book-buy { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; align-items: center; }
+  .coming-soon-badge { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); border: 1.5px solid rgba(212,168,67,0.4); padding: 12px 28px; border-radius: 30px; background: rgba(212,168,67,0.06); }
+  .coming-soon-text { font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: rgba(253,246,232,0.45); }
 
   .btn-primary {
     display: inline-flex; align-items: center; justify-content: center;
@@ -331,8 +333,8 @@
         <p><em>It's the quiet decision to keep going anyway.</em></p>
       </div>
       <div class="book-buy">
-        <a href="#" class="btn-primary">Pre-order on Amazon</a>
-        <a href="#" class="btn-secondary">Preview Inside</a>
+        <span class="coming-soon-badge">Coming June 30, 2026</span>
+        <span class="coming-soon-text">Available on Amazon</span>
       </div>
     </div>
   </div>
