@@ -354,7 +354,15 @@
         </div>
         <p style="font-family:'Inter',sans-serif; font-size:0.82rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-top:20px;">Coming soon &mdash; sign up to be the first to know.</p>
         <div style="margin-top:24px;">
-          <a href="contact.html" class="btn-secondary">Notify Me</a>
+          <form id="nl-form-books" style="display:flex;gap:12px;flex-wrap:wrap;">
+            <input type="email" id="nl-email-books" placeholder="your@email.com" required
+              style="flex:1;min-width:200px;padding:12px 20px;border-radius:30px;border:1.5px solid rgba(212,168,67,0.3);background:rgba(255,255,255,0.05);color:#fdf6e8;font-family:'Lora',serif;font-size:0.9rem;outline:none;" />
+            <button type="submit" id="nl-btn-books" class="btn-secondary" style="white-space:nowrap;">Notify Me</button>
+          </form>
+          <div id="nl-success-books" style="display:none;margin-top:12px;">
+            <span class="coming-soon-badge">You're on the list! 🐾</span>
+            <span class="coming-soon-text" style="margin-left:12px;">We'll notify you the moment it's available.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -381,6 +389,37 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.getElementById('nl-form-books').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('nl-email-books').value;
+    const btn = document.getElementById('nl-btn-books');
+    btn.textContent = 'Subscribing...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZjM4ZmJhMzIwZmYzMDhjOGFjOWNiMDA2ZWVjMmM3NGY1MGY5YTljNmI3ZDdlZDRkMTlkNTU4Yjc4OGE3NTY4NjA3OTM2NjYwZGM3ZGZhYmMiLCJpYXQiOjE3ODE0OTUwNTUuNDk0NDk0LCJuYmYiOjE3ODE0OTUwNTUuNDk0NDk2LCJleHAiOjQ5MzcxNjg2NTUuNDkwODc5LCJzdWIiOiIyNDYxODM5Iiwic2NvcGVzIjpbXX0.TKREp3pygWBK8WvJi5AK71vcu6R6nEXCK3pGdV8N3-QAt5Vyv4EhCzgeMmYOGR8p0C6RhUpo6OcHnt0Du1mwSTYpzWas5kseXaMrB5xcxuznzwOIE9Rfu-8lMLu1wEqT503-ZHv2Gu7TQy-2JH4SN1us34MjAiB8BQu87rpp3uWv6uGgqzNeLltsVZ1AaesqdSJpvmaDKS3vNtXxpwJNvzoHSQ9zd8WazFpMm0qBL6Nexf7-CDvhQeuia52pMNFTCKzEoPynnbsTAp7totd5IdaDXSfBxrT8VqCeC1QVEPdLLmkFgtrm3z1wYsXqI7V2mhDIjtWPY_psspjDqEqJJB_OP8Ynf9WLpAlpPhKtqXyIqeuGvUZWGCvsagYQXwBX1PHhIG5TjC-nuutlC9Ehi-vkS6QZS7m-aVHtOvQ_fw7C5b485lbyGDaBeftmJ7gx3fg8F1JHd-_qfE2QqpbGiIwTaxC4y4sBA0mSCVlsW0iGAZXo8IaLnURhG74n5ZnjAnGRa0NsiVZmbOuCwaSkZ2bNlTDOJS05WvJsw_zDLWPjCi0Iy0UWvG4dLLdp5D98WvrUXd650LjY6V6Imm3NYaaZhOGCU8QQhowK87pZU8WyIMAt-XUH2F24rjDi3-wIhl1n6H44AVHWy3n3MUTBbsVtBOHv2mmQq9Q-RZ6SizM'
+        },
+        body: JSON.stringify({ email: email, groups: ['190311560655144754'] })
+      });
+      if (res.ok || res.status === 200 || res.status === 201) {
+        document.getElementById('nl-form-books').style.display = 'none';
+        document.getElementById('nl-success-books').style.display = 'block';
+      } else {
+        btn.textContent = 'Notify Me';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      btn.textContent = 'Notify Me';
+      btn.disabled = false;
+      alert('Something went wrong. Please try again.');
+    }
+  });
 </script>
 </body>
 </html>
