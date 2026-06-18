@@ -271,7 +271,7 @@
     font-size: 2.4rem; font-weight: 700; color: var(--white);
     margin-bottom: 8px;
   }
-  .coming-soon-wrap { margin-top: 36px; display: flex; align-items: center; gap: 20px; }
+  .coming-soon-wrap { margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
   .coming-soon-badge { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); border: 1.5px solid rgba(212,168,67,0.4); padding: 12px 28px; border-radius: 30px; background: rgba(212,168,67,0.06); }
   .coming-soon-text { font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: rgba(253,246,232,0.45); }
 
@@ -504,24 +504,24 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     The Roaming Paws&trade;
     <span>Adventure Stories</span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="/" class="active">Home</a></li>
     <li class="nav-item-dropdown">
-      <a href="books.html">Books <span class="dropdown-arrow">▾</span></a>
+      <a href="/books">Books <span class="dropdown-arrow">▾</span></a>
       <ul class="nav-dropdown">
-        <li><a href="books/yosemite.html">Yosemite</a></li>
-        <li><a href="books/laketahoe.html">Lake Tahoe</a></li>
+        <li><a href="/books/yosemite">Yosemite</a></li>
+        <li><a href="/books/laketahoe">Lake Tahoe</a></li>
       </ul>
     </li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="/shop">Shop</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
-  <a href="books.html" class="nav-cta">Get the Book</a>
+  <a href="/books" class="nav-cta">Get the Book</a>
   <button class="nav-hamburger" id="navToggle" aria-label="Open navigation menu">
     <span></span>
     <span></span>
@@ -532,13 +532,13 @@
 <!-- MOBILE MENU -->
 <div id="mobile-menu" class="mobile-menu">
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="books.html">Books</a></li>
-    <li class="sub-item"><a href="books/yosemite.html">Yosemite</a></li>
-    <li class="sub-item"><a href="books/laketahoe.html">Lake Tahoe</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/books">Books</a></li>
+    <li class="sub-item"><a href="/books/yosemite">Yosemite</a></li>
+    <li class="sub-item"><a href="/books/laketahoe">Lake Tahoe</a></li>
+    <li><a href="/shop">Shop</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 </div>
 
@@ -553,13 +553,13 @@
       <p class="hero-subtitle">A Yosemite Adventure</p>
       <p class="hero-desc">A children's book series inspired by real places, real adventures, and one very real dog named Luna. Join Luna and her companion Oliver as they explore the most breathtaking corners of the world.</p>
       <div class="hero-buttons">
-        <a href="books/yosemite.html" class="btn-primary">Read the Story</a>
-        <a href="shop.html" class="btn-secondary">Shop Prints</a>
+        <a href="/books/yosemite" class="btn-primary">Read the Story</a>
+        <a href="/shop" class="btn-secondary">Shop Prints</a>
       </div>
     </div>
     <div class="hero-book fade-up">
       <div class="hero-book-glow"></div>
-      <img src="images/cover_web.jpg" alt="Luna Finds Her Brave &mdash; Book Cover" />
+      <img src="/images/cover_web.jpg" alt="Luna Finds Her Brave &mdash; Book Cover" />
     </div>
   </div>
 </section>
@@ -574,7 +574,7 @@
   <!-- BOOK 1 - FEATURED -->
   <div class="book-inner fade-up">
     <div class="book-cover-wrap">
-      <img src="images/cover_web.jpg" alt="Luna Finds Her Brave Book Cover" />
+      <img src="/images/cover_web.jpg" alt="Luna Finds Her Brave Book Cover" />
     </div>
     <div class="book-details">
       <p class="book-series">The Roaming Paws&trade; : Yosemite &mdash; Book 1</p>
@@ -594,6 +594,33 @@
       <div class="coming-soon-wrap">
         <span class="coming-soon-badge">Coming June 30, 2026</span>
         <span class="coming-soon-text">Available on Amazon</span>
+        <button class="btn-preview" id="btn-preview-home" aria-label="Preview book pages">&#128065; Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLORING BOOK -->
+  <div class="book-inner fade-up">
+    <div class="book-cover-wrap">
+      <img src="/images/cover_coloring_web.jpg" alt="Luna Finds Her Brave Official Coloring Book Cover" />
+    </div>
+    <div class="book-details">
+      <p class="book-series">The Roaming Paws&trade; : Yosemite &mdash; Companion</p>
+      <h3 class="book-title">Luna Finds Her Brave<br><span style="font-size:0.75em; font-weight:400; color:var(--gold);">Official Coloring Book</span></h3>
+      <div class="book-meta">
+        <span><strong>48 Pages</strong>Paperback</span>
+        <span><strong>Ages 5&ndash;11</strong>Children's Coloring Book</span>
+        <span><strong>8.5&Prime; &times; 8.5&Prime;</strong>Black &amp; White Illustrations</span>
+      </div>
+      <div class="book-blurb">
+        <p>Bring Luna's Yosemite adventure to life with your own colors! This official companion coloring book features 19 hand-illustrated scenes inspired by real locations throughout Yosemite National Park.</p>
+        <br>
+        <p><em>Each page printed single-sided so markers and pencils never bleed through. There are no rules &mdash; color boldly!</em></p>
+      </div>
+      <div class="coming-soon-wrap">
+        <span class="coming-soon-badge">Coming June 30, 2026</span>
+        <span class="coming-soon-text">Available on Amazon</span>
+        <button class="btn-preview" data-preview="coloring" id="btn-preview-coloring-home" aria-label="Preview coloring book pages">&#128065; Preview</button>
       </div>
     </div>
   </div>
@@ -602,7 +629,7 @@
   <div class="book2-teaser fade-up">
     <div class="book2-teaser-inner">
       <div class="book2-cover-wrap">
-        <img src="images/book2_cover.png" alt="Luna Finds Her Joy &mdash; Coming Soon" />
+        <img src="/images/book2_cover.png" alt="Luna Finds Her Joy &mdash; Coming Soon" />
         <span class="book2-coming-badge">Coming Soon</span>
       </div>
       <div class="book2-text">
@@ -626,7 +653,7 @@
   <div class="shop-grid">
     <div class="shop-card fade-up">
       <div class="shop-card-img">
-        <img src="images/shop_halfdome.jpg" alt="Half Dome at Sunset Print" loading="lazy" />
+        <img src="/images/shop_halfdome.jpg" alt="Half Dome at Sunset Print" loading="lazy" />
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Half Dome at Sunset</h3>
@@ -636,7 +663,7 @@
     </div>
     <div class="shop-card fade-up">
       <div class="shop-card-img">
-        <img src="images/shop_sunset_layers.jpg" alt="Sierra Nevada Sunset Layers Print" loading="lazy" />
+        <img src="/images/shop_sunset_layers.jpg" alt="Sierra Nevada Sunset Layers Print" loading="lazy" />
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Sierra Nevada Layers</h3>
@@ -646,7 +673,7 @@
     </div>
     <div class="shop-card fade-up">
       <div class="shop-card-img">
-        <img src="images/shop_milkyway.jpg" alt="Yosemite Milky Way Stars Print" loading="lazy" />
+        <img src="/images/shop_milkyway.jpg" alt="Yosemite Milky Way Stars Print" loading="lazy" />
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Yosemite Starry Night</h3>
@@ -656,7 +683,7 @@
     </div>
     <div class="shop-card fade-up">
       <div class="shop-card-img">
-        <img src="images/shop_pine_dusk.jpg" alt="Pine Silhouettes at Dusk Print" loading="lazy" />
+        <img src="/images/shop_pine_dusk.jpg" alt="Pine Silhouettes at Dusk Print" loading="lazy" />
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Pines at Dusk</h3>
@@ -666,7 +693,7 @@
     </div>
     <div class="shop-card fade-up">
       <div class="shop-card-img">
-        <img src="images/shop_halfdome_gold.jpg" alt="Half Dome Golden Light Print" loading="lazy" />
+        <img src="/images/shop_halfdome_gold.jpg" alt="Half Dome Golden Light Print" loading="lazy" />
       </div>
       <div class="shop-card-body">
         <h3 class="shop-card-name">Half Dome, Golden Light</h3>
@@ -676,7 +703,7 @@
     </div>
   </div>
   <div class="shop-cta-wrap fade-up">
-    <a href="shop.html" class="btn-primary">View All Products</a>
+    <a href="/shop" class="btn-primary">View All Products</a>
     <p class="shop-note">All prints shipped worldwide &nbsp;&middot;&nbsp; Museum-quality materials &nbsp;&middot;&nbsp; 100% satisfaction guarantee</p>
   </div>
 </section>
@@ -688,7 +715,7 @@
   <div class="section-divider"></div>
   <div class="about-inner">
     <div class="about-img-wrap fade-up">
-      <img src="images/luna-cutout.png" alt="Luna, the real dog behind The Roaming Paws" />
+      <img src="/images/luna-cutout.png" alt="Luna, the real dog behind The Roaming Paws" />
     </div>
     <div class="about-text fade-up">
       <div class="about-body">
@@ -779,11 +806,11 @@
   <p class="footer-logo">The Roaming Paws&trade;</p>
   <p class="footer-tagline">Adventure stories for little explorers.</p>
   <ul class="footer-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="books.html">Books</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/books">Books</a></li>
+    <li><a href="/shop">Shop</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
   <p class="footer-copy">&copy; 2026 Marin Creative Solutions LLC &nbsp;&middot;&nbsp; The Roaming Paws&trade; is a brand of Marin Creative Solutions LLC &nbsp;&middot;&nbsp; All rights reserved.</p>
 </footer>
@@ -877,5 +904,174 @@
     });
   }
 </script>
+
+<!-- PREVIEW MODAL -->
+<div id="preview-modal" class="preview-modal" role="dialog" aria-modal="true" aria-label="Book Preview">
+  <div class="preview-backdrop" id="preview-backdrop"></div>
+  <button class="preview-close" id="preview-close" aria-label="Close preview">&times;</button>
+  <button class="preview-nav preview-prev" id="preview-prev" aria-label="Previous page">&#8249;</button>
+  <div class="preview-content">
+    <img id="preview-img" src="" alt="Book preview page" />
+    <div class="preview-counter"><span id="preview-current">1</span> / <span id="preview-total">5</span></div>
+  </div>
+  <button class="preview-nav preview-next" id="preview-next" aria-label="Next page">&#8250;</button>
+</div>
+
+<style>
+  .preview-modal {
+    display: none; position: fixed; inset: 0; z-index: 9999;
+    align-items: center; justify-content: center;
+  }
+  .preview-modal.open { display: flex; }
+  .preview-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(10,4,25,0.93);
+    backdrop-filter: blur(10px);
+  }
+  .preview-content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .preview-content img {
+    max-width: 92vw; max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(212,168,67,0.15);
+    object-fit: contain; display: block;
+    transition: opacity 0.2s ease;
+  }
+  .preview-counter {
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif; font-size: 0.78rem;
+    color: rgba(253,246,232,0.45); letter-spacing: 3px;
+  }
+  .preview-close {
+    position: fixed; top: 22px; right: 30px; z-index: 3;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 50%; width: 44px; height: 44px;
+    font-size: 1.5rem; color: rgba(253,246,232,0.7);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .preview-close:hover { background: rgba(212,168,67,0.15); color: var(--gold-light); }
+  .preview-nav {
+    position: relative; z-index: 2; flex-shrink: 0;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 50%; width: 52px; height: 52px;
+    font-size: 2rem; color: rgba(253,246,232,0.7);
+    cursor: pointer; margin: 0 16px;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .preview-nav:hover { background: rgba(212,168,67,0.15); color: var(--gold-light); }
+  .preview-nav:disabled { opacity: 0.2; cursor: default; pointer-events: none; }
+  .btn-preview {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 10px 22px; border-radius: 30px;
+    border: 1.5px solid rgba(212,168,67,0.45);
+    background: transparent; color: var(--gold-light);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn-preview:hover { background: rgba(212,168,67,0.12); border-color: var(--gold); color: var(--gold); }
+
+  /* == Mobile fixes: overlaid nav arrows + responsive sizes == */
+
+  .preview-nav { position: absolute; top: 50%; transform: translateY(-50%); flex-shrink: 0; margin: 0; z-index: 3; }
+
+  .preview-prev { left: 20px; }
+
+  .preview-next { right: 20px; }
+
+  @media (max-width: 600px) {
+
+    .preview-content img { max-height: 60vh; }
+
+    .preview-nav { width: 40px; height: 40px; font-size: 1.5rem; }
+
+    .preview-prev { left: 8px; }
+
+    .preview-next { right: 8px; }
+
+  }
+
+</style>
+
+<script>
+(function() {
+  var imageSets = {
+    main: [
+      { src: '/images/preview/yosemite_spreads/spread_01_title.jpg',   label: '1' },
+      { src: '/images/preview/yosemite_spreads/spread_02_spread1.jpg', label: '2' },
+      { src: '/images/preview/yosemite_spreads/spread_03_spread2.jpg', label: '3' },
+      { src: '/images/preview/yosemite_spreads/spread_04_spread3.jpg', label: '4' },
+      { src: '/images/preview/yosemite_spreads/spread_05_spread4.jpg', label: '5' },
+    ],
+    coloring: [
+      { src: '/images/preview/coloring/coloring_cover.jpg',         label: '1' },
+      { src: '/images/preview/coloring/coloring_p02_luna.jpg',     label: '2' },
+      { src: '/images/preview/coloring/coloring_p03_spread00.jpg', label: '3' },
+      { src: '/images/preview/coloring/coloring_p04_spread01.jpg', label: '4' },
+      { src: '/images/preview/coloring/coloring_p05_spread02.jpg', label: '5' },
+    ],
+  };
+  var images = imageSets.main;
+  var current = 0;
+  var modal    = document.getElementById('preview-modal');
+  var imgEl    = document.getElementById('preview-img');
+  var counter  = document.getElementById('preview-current');
+  var total    = document.getElementById('preview-total');
+  var prevBtn  = document.getElementById('preview-prev');
+  var nextBtn  = document.getElementById('preview-next');
+  var closeBtn = document.getElementById('preview-close');
+  var backdrop = document.getElementById('preview-backdrop');
+
+  total.textContent = images.length;
+
+  function show(i) {
+    current = i;
+    imgEl.style.opacity = '0';
+    setTimeout(function() {
+      imgEl.src = images[i].src;
+      imgEl.alt = 'Preview page ' + images[i].label;
+      imgEl.style.opacity = '1';
+    }, 150);
+    counter.textContent = i + 1;
+    total.textContent = images.length;
+    prevBtn.disabled = (i === 0);
+    nextBtn.disabled = (i === images.length - 1);
+  }
+
+  function openModal(e) {
+    var set = (e.currentTarget.getAttribute('data-preview') === 'coloring') ? 'coloring' : 'main';
+    images = imageSets[set];
+    show(0);
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.btn-preview').forEach(function(btn) {
+    btn.addEventListener('click', openModal);
+  });
+
+  prevBtn.addEventListener('click', function() { if (current > 0) show(current - 1); });
+  nextBtn.addEventListener('click', function() { if (current < images.length - 1) show(current + 1); });
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', function(e) {
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft'  && current > 0) show(current - 1);
+    if (e.key === 'ArrowRight' && current < images.length - 1) show(current + 1);
+    if (e.key === 'Escape') closeModal();
+  });
+})();
+</script>
+
 </body>
 </html>
