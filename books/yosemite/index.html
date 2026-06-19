@@ -285,7 +285,11 @@
   <button class="preview-close" id="preview-close" aria-label="Close preview">&times;</button>
   <button class="preview-nav preview-prev" id="preview-prev" aria-label="Previous page">&#8249;</button>
   <div class="preview-content">
-    <img id="preview-img" src="" alt="Book preview page" />
+    <div class="preview-img-wrap">
+
+      <img id="preview-img" src="" alt="Book preview page" />
+
+    </div>
     <div class="preview-counter"><span id="preview-current">1</span> / <span id="preview-total">5</span></div>
   </div>
   <button class="preview-nav preview-next" id="preview-next" aria-label="Next page">&#8250;</button>
@@ -325,6 +329,24 @@
     .preview-next { right: 8px; }
 
   }
+  /* == Page-turn transitions == */
+  .preview-img-wrap { overflow: hidden; display: flex; align-items: center; justify-content: center; max-width: 92vw; }
+  #preview-img { max-width: 100%; max-height: 80vh; border-radius: 10px; box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(212,168,67,0.15); object-fit: contain; display: block; transform-origin: center; transition: transform 0.32s cubic-bezier(0.4,0,0.2,1), opacity 0.32s ease; }
+  /* Slide - main book spreads */
+  .modal-slide #preview-img.exit-forward   { transform: translateX(-35%) scale(0.93); opacity: 0; }
+  .modal-slide #preview-img.exit-backward  { transform: translateX(35%) scale(0.93);  opacity: 0; }
+  .modal-slide #preview-img.enter-forward  { transform: translateX(35%) scale(0.93);  opacity: 0; transition: none; }
+  .modal-slide #preview-img.enter-backward { transform: translateX(-35%) scale(0.93); opacity: 0; transition: none; }
+  /* 3D flip - coloring book pages */
+  .modal-flip .preview-img-wrap { perspective: 1000px; }
+  .modal-flip #preview-img.exit-forward    { transform: rotateY(-90deg) scale(0.92); opacity: 0; }
+  .modal-flip #preview-img.exit-backward   { transform: rotateY(90deg)  scale(0.92); opacity: 0; }
+  .modal-flip #preview-img.enter-forward   { transform: rotateY(90deg)  scale(0.92); opacity: 0; transition: none; }
+  .modal-flip #preview-img.enter-backward  { transform: rotateY(-90deg) scale(0.92); opacity: 0; transition: none; }
+  @media (max-width: 600px) {
+    .preview-img-wrap { max-width: 96vw; }
+    #preview-img { max-height: 60vh; }
+  }
 
 </style>
 
@@ -332,22 +354,28 @@
 (function() {
   var imageSets = {
     main: [
-      { src: '/images/preview/yosemite_spreads/spread_01_title.jpg',   label: '1' },
-      { src: '/images/preview/yosemite_spreads/spread_02_spread1.jpg', label: '2' },
-      { src: '/images/preview/yosemite_spreads/spread_03_spread2.jpg', label: '3' },
-      { src: '/images/preview/yosemite_spreads/spread_04_spread3.jpg', label: '4' },
-      { src: '/images/preview/yosemite_spreads/spread_05_spread4.jpg', label: '5' },
+      { src: '/images/preview/yosemite_pages/preview_p01_title.jpg',         label: '1' },
+      { src: '/images/preview/yosemite_pages/preview_p02_spread1_illus.jpg', label: '2' },
+      { src: '/images/preview/yosemite_pages/preview_p03_spread1_text.jpg',  label: '3' },
+      { src: '/images/preview/yosemite_pages/preview_p04_spread2_text.jpg',  label: '4' },
+      { src: '/images/preview/yosemite_pages/preview_p05_spread2_illus.jpg', label: '5' },
+      { src: '/images/preview/yosemite_pages/preview_p06_spread3_illus.jpg', label: '6' },
+      { src: '/images/preview/yosemite_pages/preview_p07_spread3_text.jpg',  label: '7' },
+      { src: '/images/preview/yosemite_pages/preview_p08_spread4_text.jpg',  label: '8' },
+      { src: '/images/preview/yosemite_pages/preview_p09_spread4_illus.jpg', label: '9' },
     ],
     coloring: [
       { src: '/images/preview/coloring/coloring_cover.jpg',         label: '1' },
-      { src: '/images/preview/coloring/coloring_p02_luna.jpg',     label: '2' },
-      { src: '/images/preview/coloring/coloring_p03_spread00.jpg', label: '3' },
-      { src: '/images/preview/coloring/coloring_p04_spread01.jpg', label: '4' },
-      { src: '/images/preview/coloring/coloring_p05_spread02.jpg', label: '5' },
+      { src: '/images/preview/coloring/coloring_p02_luna.jpg',      label: '2' },
+      { src: '/images/preview/coloring/coloring_p03_spread00.jpg',  label: '3' },
+      { src: '/images/preview/coloring/coloring_p04_spread01.jpg',  label: '4' },
+      { src: '/images/preview/coloring/coloring_p05_spread02.jpg',  label: '5' },
     ],
   };
   var images = imageSets.main;
   var current = 0;
+  var isAnimating = false;
+  var isFirstShow = true;
   var modal    = document.getElementById('preview-modal');
   var imgEl    = document.getElementById('preview-img');
   var counter  = document.getElementById('preview-current');
@@ -359,24 +387,52 @@
 
   total.textContent = images.length;
 
-  function show(i) {
+  function show(i, direction) {
+    if (isAnimating) return;
+    isAnimating = true;
+    var dir = direction || (i > current ? 'forward' : 'backward');
     current = i;
-    imgEl.style.opacity = '0';
-    setTimeout(function() {
-      imgEl.src = images[i].src;
-      imgEl.alt = 'Preview page ' + images[i].label;
-      imgEl.style.opacity = '1';
-    }, 150);
     counter.textContent = i + 1;
     total.textContent = images.length;
     prevBtn.disabled = (i === 0);
     nextBtn.disabled = (i === images.length - 1);
+
+    if (isFirstShow) {
+      /* First image on open: simple fade, no directional animation */
+      imgEl.src = images[i].src;
+      imgEl.alt = 'Preview page ' + images[i].label;
+      imgEl.style.opacity = '0';
+      void imgEl.offsetWidth;
+      imgEl.style.opacity = '';
+      isFirstShow = false;
+      isAnimating = false;
+      return;
+    }
+
+    /* Exit current page */
+    imgEl.classList.add('exit-' + dir);
+    setTimeout(function() {
+      imgEl.src = images[i].src;
+      imgEl.alt = 'Preview page ' + images[i].label;
+      /* Snap to enter start position (no transition) */
+      imgEl.classList.remove('exit-' + dir);
+      imgEl.classList.add('enter-' + dir);
+      void imgEl.offsetWidth; /* force reflow */
+      /* Animate to neutral */
+      imgEl.classList.remove('enter-' + dir);
+      setTimeout(function() { isAnimating = false; }, 350);
+    }, 320);
   }
 
   function openModal(e) {
     var set = (e.currentTarget.getAttribute('data-preview') === 'coloring') ? 'coloring' : 'main';
     images = imageSets[set];
-    show(0);
+    modal.classList.remove('modal-slide', 'modal-flip');
+    modal.classList.add('modal-flip');
+    total.textContent = images.length;
+    isFirstShow = true;
+    isAnimating = false;
+    show(0, 'forward');
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -384,23 +440,42 @@
   function closeModal() {
     modal.classList.remove('open');
     document.body.style.overflow = '';
+    isAnimating = false;
+    imgEl.classList.remove('exit-forward', 'exit-backward', 'enter-forward', 'enter-backward');
   }
 
   document.querySelectorAll('.btn-preview').forEach(function(btn) {
     btn.addEventListener('click', openModal);
   });
 
-  prevBtn.addEventListener('click', function() { if (current > 0) show(current - 1); });
-  nextBtn.addEventListener('click', function() { if (current < images.length - 1) show(current + 1); });
+  prevBtn.addEventListener('click', function() {
+    if (!isAnimating && current > 0) show(current - 1, 'backward');
+  });
+  nextBtn.addEventListener('click', function() {
+    if (!isAnimating && current < images.length - 1) show(current + 1, 'forward');
+  });
   closeBtn.addEventListener('click', closeModal);
   backdrop.addEventListener('click', closeModal);
 
   document.addEventListener('keydown', function(e) {
     if (!modal.classList.contains('open')) return;
-    if (e.key === 'ArrowLeft'  && current > 0) show(current - 1);
-    if (e.key === 'ArrowRight' && current < images.length - 1) show(current + 1);
+    if (e.key === 'ArrowLeft'  && !isAnimating && current > 0) show(current - 1, 'backward');
+    if (e.key === 'ArrowRight' && !isAnimating && current < images.length - 1) show(current + 1, 'forward');
     if (e.key === 'Escape') closeModal();
   });
+
+  /* Touch swipe for mobile */
+  var touchStartX = 0;
+  modal.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  modal.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && !isAnimating && current < images.length - 1) show(current + 1, 'forward');
+      else if (diff < 0 && !isAnimating && current > 0) show(current - 1, 'backward');
+    }
+  }, { passive: true });
 })();
 </script>
 
