@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found &mdash; The Roaming Paws&trade;</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32"   href="/images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="512x512"  href="/images/favicon-512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --purple-deep: #1a0a2e; --gold: #d4a843; --gold-light: #f0c866;
+    --cream: #fdf6e8; --grad-hero: linear-gradient(160deg,#0d0520 0%,#2d1457 40%,#1a3a6e 80%,#0d2040 100%);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', serif; background: var(--purple-deep); color: var(--cream); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; inset: 0; background: var(--grad-hero); z-index: -1; }
+  body::after  { content: ''; position: fixed; inset: 0; background: radial-gradient(ellipse at 50% 30%, rgba(212,168,67,0.08) 0%, transparent 65%); z-index: -1; }
+  .paw { font-size: 5rem; margin-bottom: 24px; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  .code { font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(212,168,67,0.35); padding: 6px 18px; border-radius: 20px; background: rgba(212,168,67,0.08); display: inline-block; margin-bottom: 24px; }
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
+  p { font-family: 'Lora', serif; font-size: 1rem; color: rgba(253,246,232,0.6); max-width: 480px; line-height: 1.8; margin-bottom: 40px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 30px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); color: var(--purple-deep); font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 6px 24px rgba(212,168,67,0.4); }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(212,168,67,0.55); }
+  .links { display: flex; gap: 24px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+  .links a { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: rgba(253,246,232,0.45); letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: color 0.3s; }
+  .links a:hover { color: var(--gold-light); }
+</style>
+</head>
+<body>
+  <div class="paw">&#x1F43E;</div>
+  <span class="code">404 &mdash; Lost on the Trail</span>
+  <h1>Luna wandered off the path&hellip;</h1>
+  <p>The page you&rsquo;re looking for doesn&rsquo;t exist &mdash; or maybe it moved to a new adventure. Let&rsquo;s get you back on the trail.</p>
+  <a href="/" class="btn">&#x2190;&nbsp; Back to Home</a>
+  <nav class="links">
+    <a href="/books">Books</a>
+    <a href="/shop">Shop</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</body>
+</html>

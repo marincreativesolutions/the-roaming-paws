@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thank You &mdash; The Roaming Paws&trade;</title>
 <meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32"   href="/images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="512x512"  href="/images/favicon-512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -59,6 +62,29 @@
     nav { padding: 16px 24px; }
     .thankyou-wrap { padding: 120px 24px 60px; }
   }
+
+  /* == Cookie consent banner == */
+  .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998;
+    background: rgba(10,5,24,0.97); backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(212,168,67,0.18);
+    padding: 14px 60px; display: flex; align-items: center;
+    justify-content: space-between; gap: 16px;
+    font-family: 'Inter', sans-serif; font-size: 0.78rem;
+    color: rgba(253,246,232,0.6); line-height: 1.5;
+  }
+  .cookie-banner a { color: var(--gold, #d4a843); text-decoration: underline; }
+  .cookie-banner-btn {
+    flex-shrink: 0; background: linear-gradient(135deg, #d4a843 0%, #f0c866 100%);
+    color: #1a0a2e; border: none; border-radius: 20px;
+    padding: 8px 22px; font-family: 'Inter', sans-serif;
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer; transition: transform 0.2s;
+  }
+  .cookie-banner-btn:hover { transform: translateY(-1px); }
+  @media (max-width: 600px) {
+    .cookie-banner { padding: 12px 16px; flex-direction: column; text-align: center; gap: 10px; }
+  }
 </style>
 </head>
 <body>
@@ -87,5 +113,21 @@
   <p class="footer-copy">&copy; 2026 Marin Creative Solutions LLC &nbsp;&middot;&nbsp; The Roaming Paws&trade; is a brand of Marin Creative Solutions LLC</p>
 </footer>
 
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookie-banner" style="display:none">
+  <span>This site uses cookies to enable secure payment processing. By continuing to browse you agree to their use. <a href="/about">Learn more</a></span>
+  <button class="cookie-banner-btn" id="cookie-ok">Got it</button>
+</div>
+<script>
+  (function() {
+    var banner = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('cookie_consent')) { banner.style.display = 'flex'; }
+    document.getElementById('cookie-ok').addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', '1');
+      banner.style.display = 'none';
+    });
+  })();
+</script>
 </body>
 </html>
