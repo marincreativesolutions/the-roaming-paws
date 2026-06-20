@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You &mdash; The Roaming Paws&trade;</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --purple-deep: #1a0a2e; --purple-mid: #2d1457;
+    --gold: #d4a843; --gold-light: #f0c866; --gold-pale: #fdeebb;
+    --cream: #fdf6e8;
+    --grad-hero: linear-gradient(160deg, #0d0520 0%, #2d1457 40%, #1a3a6e 80%, #0d2040 100%);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', serif; background: var(--purple-deep); color: var(--cream); min-height: 100vh; display: flex; flex-direction: column; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: 18px 60px; background: rgba(13,5,32,0.97); backdrop-filter: blur(8px); }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); letter-spacing: 1px; text-decoration: none; }
+  .nav-logo span { font-style: italic; font-weight: 400; color: var(--gold-pale); font-size: 0.85rem; display: block; letter-spacing: 3px; text-transform: uppercase; }
+
+  .thankyou-wrap {
+    flex: 1;
+    background: var(--grad-hero);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 140px 40px 80px;
+    position: relative; overflow: hidden;
+  }
+  .thankyou-wrap::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(212,168,67,0.14) 0%, transparent 65%);
+  }
+  .thankyou-content { position: relative; z-index: 2; max-width: 600px; }
+
+  .paw-icon { font-size: 3.5rem; margin-bottom: 24px; display: block; animation: bounce 1.8s ease-in-out infinite; }
+  @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+  .section-badge { display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(212,168,67,0.4); padding: 6px 18px; border-radius: 20px; background: rgba(212,168,67,0.08); margin-bottom: 24px; }
+
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; color: var(--cream); line-height: 1.2; margin-bottom: 20px; }
+  h1 em { font-style: italic; color: var(--gold-light); }
+
+  .thankyou-text { font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.9; color: rgba(253,246,232,0.7); margin-bottom: 40px; }
+
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; border-radius: 30px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); color: var(--purple-deep); font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 6px 24px rgba(212,168,67,0.4); margin: 0 8px; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(212,168,67,0.55); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; border-radius: 30px; border: 1.5px solid rgba(212,168,67,0.4); color: var(--gold-light); font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: background 0.2s, border-color 0.2s, transform 0.2s; margin: 0 8px; }
+  .btn-secondary:hover { background: rgba(212,168,67,0.1); border-color: var(--gold); transform: translateY(-2px); }
+  .btn-wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+  footer { background: #0a0518; padding: 30px 60px; text-align: center; border-top: 1px solid rgba(212,168,67,0.1); }
+  .footer-copy { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: rgba(253,246,232,0.25); }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 24px; }
+    .thankyou-wrap { padding: 120px 24px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">The Roaming Paws&trade;<span>Adventure Stories</span></a>
+</nav>
+
+<div class="thankyou-wrap">
+  <div class="thankyou-content">
+    <span class="paw-icon">🐾</span>
+    <span class="section-badge">Message Received</span>
+    <h1>Thank you for<br><em>reaching out!</em></h1>
+    <p class="thankyou-text">
+      We got your message and we&rsquo;ll get back to you as soon as possible.<br>
+      In the meantime, explore Luna&rsquo;s adventures or browse the shop.
+    </p>
+    <div class="btn-wrap">
+      <a href="index.html" class="btn-primary">Back to Home</a>
+      <a href="books.html" class="btn-secondary">Explore the Books</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="footer-copy">&copy; 2026 Marin Creative Solutions LLC &nbsp;&middot;&nbsp; The Roaming Paws&trade; is a brand of Marin Creative Solutions LLC</p>
+</footer>
+
+</body>
+</html>
