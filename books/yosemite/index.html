@@ -127,8 +127,8 @@
   .book-blurb em { color: var(--gold-pale); font-style: italic; }
 
   .coming-soon-wrap { margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
-  .coming-soon-badge { font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); border: 1.5px solid rgba(212,168,67,0.4); padding: 12px 28px; border-radius: 30px; background: rgba(212,168,67,0.06); }
-  .coming-soon-text { font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: rgba(253,246,232,0.45); }
+  .btn-amazon { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--purple-deep); background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); padding: 14px 32px; border-radius: 30px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 20px rgba(212,168,67,0.35); white-space: nowrap; }
+  .btn-amazon:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,168,67,0.5); }
 
   /* BEHIND THE STORY - text only, no image */
   .author-section { border-top: 1px solid rgba(212,168,67,0.12); padding-top: 80px; margin-bottom: 80px; }
@@ -268,9 +268,8 @@
         <p><em>It&rsquo;s the quiet decision to keep going anyway.</em></p>
       </div>
       <div class="coming-soon-wrap">
-        <span class="coming-soon-badge">Coming June 30, 2026</span>
-        <span class="coming-soon-text">Available on Amazon</span>
-        <button class="btn-preview" id="btn-preview-yosemite" aria-label="Preview book pages">&#128065; Preview</button>
+        <a href="https://www.amazon.com/dp/B0H568LV7S" class="btn-amazon" target="_blank" rel="noopener noreferrer">🛒 Buy on Amazon</a>
+        <button class="btn-preview" id="btn-preview-yosemite" aria-label="Preview book pages">👁 Preview</button>
       </div>
     </div>
   </div>
@@ -297,9 +296,8 @@
         <p><em>Each page printed single-sided so markers and pencils never bleed through. There are no rules &mdash; color boldly!</em></p>
       </div>
       <div class="coming-soon-wrap">
-        <span class="coming-soon-badge">Coming June 30, 2026</span>
-        <span class="coming-soon-text">Available on Amazon</span>
-        <button class="btn-preview" data-preview="coloring" id="btn-preview-coloring-yosemite" aria-label="Preview coloring book pages">&#128065; Preview</button>
+        <a href="https://www.amazon.com/dp/B0H5VJ4JVW" class="btn-amazon" target="_blank" rel="noopener noreferrer">🛒 Buy on Amazon</a>
+        <button class="btn-preview" data-preview="coloring" id="btn-preview-coloring-yosemite" aria-label="Preview coloring book pages">👁 Preview</button>
       </div>
     </div>
   </div>
