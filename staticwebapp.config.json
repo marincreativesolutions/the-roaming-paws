@@ -14,5 +14,9 @@
     "X-Frame-Options": "SAMEORIGIN",
     "Referrer-Policy": "strict-origin-when-cross-origin",
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  },
+  "mimeTypes": {
+    ".xml": "application/xml",
+    ".txt": "text/plain"
   }
 }
