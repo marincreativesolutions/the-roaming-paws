@@ -1,4 +1,8 @@
 {
+  "routes": [
+    { "route": "/sitemap.xml" },
+    { "route": "/robots.txt" }
+  ],
   "responseOverrides": {
     "404": {
       "rewrite": "/404.html",
