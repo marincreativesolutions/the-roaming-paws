@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thankyou/
 
-Sitemap: https://theroamingpaws.com/sitemap.xml
+Sitemap: https://www.theroamingpaws.com/sitemap.xml
