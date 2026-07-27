@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY85DZ1NCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EY85DZ1NCV');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Patitas Viajeras&trade; &mdash; Historias de Aventuras para Pequeños Exploradores</title>
+<meta name="description" content="Las Patitas Viajeras&trade; es una serie de libros infantiles inspirada en lugares reales, aventuras reales y una pequeña perrita muy real llamada Luna. Consigue los libros en Amazon.">
+<!-- Open Graph / Social Sharing -->
+<meta property="og:site_name" content="Las Patitas Viajeras™" />
+<meta property="og:type"      content="website" />
+<meta property="og:title"     content="Las Patitas Viajeras™ — Historias de Aventuras para Pequeños Exploradores" />
+<meta property="og:description" content="Las Patitas Viajeras™ es una serie de libros infantiles inspirada en lugares reales, aventuras reales y una pequeña perrita muy real llamada Luna." />
+<meta property="og:url"       content="https://theroamingpaws.com/es/" />
+<meta property="og:image"     content="https://theroamingpaws.com/images/cover_web.jpg" />
+<!-- Twitter / X Card -->
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="Las Patitas Viajeras™ — Historias de Aventuras para Pequeños Exploradores" />
+<meta name="twitter:description" content="Las Patitas Viajeras™ es una serie de libros infantiles inspirada en lugares reales, aventuras reales y una pequeña perrita muy real llamada Luna." />
+<meta name="twitter:image"       content="https://theroamingpaws.com/images/cover_web.jpg" />
+<!-- Canonical -->
+<link rel="canonical" href="https://theroamingpaws.com/es/" />
+<!-- hreflang -->
+<link rel="alternate" hreflang="en" href="https://theroamingpaws.com/" />
+<link rel="alternate" hreflang="es" href="https://theroamingpaws.com/es/" />
+<link rel="alternate" hreflang="x-default" href="https://theroamingpaws.com/" />
+<link rel="icon" type="image/png" sizes="32x32"   href="/images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="512x512"  href="/images/favicon-512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple-deep:  #1a0a2e;
+    --purple-mid:   #2d1457;
+    --purple-light: #4a2080;
+    --gold:         #d4a843;
+    --gold-light:   #f0c866;
+    --gold-pale:    #fdeebb;
+    --cream:        #fdf6e8;
+    --white:        #ffffff;
+    --grad-hero: linear-gradient(160deg, #0d0520 0%, #2d1457 40%, #1a3a6e 80%, #0d2040 100%);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', serif;
+    background: var(--purple-deep);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 60px;
+    background: linear-gradient(180deg, rgba(13,5,32,0.97) 0%, rgba(13,5,32,0) 100%);
+    backdrop-filter: blur(8px);
+    transition: background 0.3s;
+  }
+  nav.scrolled { background: rgba(13,5,32,0.97); }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+  .nav-logo span { font-style: italic; font-weight: 400; color: var(--gold-pale); font-size: 0.85rem; display: block; letter-spacing: 3px; text-transform: uppercase; }
+
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500;
+    color: rgba(253,246,232,0.75); letter-spacing: 2px; text-transform: uppercase;
+    text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-cta {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 10px 24px; border-radius: 30px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--purple-deep); text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(212,168,67,0.35);
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,168,67,0.5); }
+
+  /* DROPDOWN */
+  .nav-item-dropdown { position: relative; }
+  .dropdown-arrow { font-size: 0.65rem; margin-left: 4px; opacity: 0.7; }
+  .nav-dropdown {
+    position: absolute; top: calc(100% + 14px); left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: rgba(13,5,32,0.98); border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 10px; padding: 8px 0; min-width: 160px; list-style: none;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 1001; backdrop-filter: blur(12px);
+  }
+  .nav-item-dropdown:hover .nav-dropdown {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+  }
+  .nav-dropdown li a {
+    display: block; padding: 10px 22px;
+    font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 500;
+    color: rgba(253,246,232,0.7); letter-spacing: 2px; text-transform: uppercase;
+    text-decoration: none; transition: color 0.2s, background 0.2s; white-space: nowrap;
+  }
+  .nav-dropdown li a:hover { color: var(--gold-light); background: rgba(212,168,67,0.08); }
+
+  /* LANGUAGE TOGGLE */
+  .lang-toggle {
+    display: flex; align-items: center; gap: 6px; margin-right: 4px;
+  }
+  .lang-option {
+    font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 2px; color: rgba(253,246,232,0.45); text-decoration: none;
+    transition: color 0.25s;
+  }
+  .lang-option:hover { color: var(--gold-light); }
+  .lang-sep { color: rgba(253,246,232,0.2); font-size: 0.65rem; }
+  .lang-active {
+    font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 2px; color: var(--gold-light);
+  }
+
+  /* HERO */
+  #home {
+    min-height: 100vh;
+    background: var(--grad-hero);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; padding: 120px 60px 80px;
+  }
+
+  .hero-stars {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 50% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 40% 20%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 85%, rgba(255,255,255,0.3) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .hero-glow {
+    position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%);
+    width: 800px; height: 400px;
+    background: radial-gradient(ellipse, rgba(180,100,20,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center; max-width: 1100px; width: 100%;
+    position: relative; z-index: 1;
+  }
+
+  .hero-badge {
+    font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 20px; display: block;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 700; line-height: 1.1;
+    color: var(--white); margin-bottom: 12px;
+  }
+  .hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-style: italic; color: var(--gold-light);
+    margin-bottom: 28px;
+  }
+  .hero-desc {
+    font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.8;
+    color: rgba(253,246,232,0.8); margin-bottom: 40px; max-width: 480px;
+  }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 16px 36px; border-radius: 40px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--purple-deep); text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 30px rgba(212,168,67,0.4);
+  }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(212,168,67,0.55); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 16px 36px; border-radius: 40px;
+    border: 1.5px solid rgba(212,168,67,0.5);
+    color: var(--gold-light); text-decoration: none;
+    transition: all 0.2s;
+    background: rgba(212,168,67,0.07);
+  }
+  .btn-secondary:hover { background: rgba(212,168,67,0.15); border-color: var(--gold); transform: translateY(-2px); }
+
+  .hero-book {
+    display: flex; justify-content: center; align-items: center;
+    position: relative;
+  }
+  .hero-book img {
+    width: 100%; max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 60px rgba(180,100,20,0.3);
+    transform: perspective(800px) rotateY(-8deg);
+    transition: transform 0.4s;
+  }
+  .hero-book img:hover { transform: perspective(800px) rotateY(0deg); }
+
+  .hero-book-glow {
+    position: absolute; inset: -20px;
+    background: radial-gradient(ellipse at center, rgba(180,100,20,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* SECTIONS */
+  section { padding: 100px 60px; }
+  .section-badge {
+    font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
+    display: block; margin-bottom: 16px; text-align: center;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 700; color: var(--white);
+    text-align: center; margin-bottom: 16px;
+  }
+  .section-subtitle {
+    font-family: 'Lora', serif; font-size: 1.05rem; font-style: italic;
+    color: var(--gold-light); text-align: center; margin-bottom: 60px;
+  }
+  .section-divider {
+    width: 60px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 60px;
+  }
+
+  /* BOOKS */
+  #book { background: linear-gradient(180deg, var(--purple-deep) 0%, #0d1535 100%); }
+
+  .book-inner {
+    display: grid; grid-template-columns: 1fr 1.3fr;
+    gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;
+    margin-bottom: 80px;
+  }
+  .book-cover-wrap img {
+    width: 100%; max-width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.6), 0 0 40px rgba(180,100,20,0.25);
+  }
+
+  /* Book 2 Teaser */
+  .book2-teaser {
+    max-width: 1100px; margin: 0 auto;
+    border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 20px;
+    background: rgba(212,168,67,0.04);
+    padding: 50px 60px;
+  }
+  .book2-teaser-inner {
+    display: grid; grid-template-columns: 260px 1fr;
+    gap: 60px; align-items: center;
+  }
+  .book2-cover-wrap {
+    position: relative; width: 100%;
+  }
+  .book2-cover-wrap img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.55), 0 0 30px rgba(180,100,20,0.2);
+    filter: brightness(0.88);
+  }
+  .book2-coming-badge {
+    position: absolute; top: 14px; left: 14px;
+    font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--purple-deep);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  @media (max-width: 900px) {
+    .book2-teaser { padding: 30px 24px; }
+    .book2-teaser-inner { grid-template-columns: 1fr; }
+    .book2-cover-wrap { max-width: 220px; margin: 0 auto; }
+  }
+  .book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem; font-weight: 700; color: var(--white);
+    margin-bottom: 8px;
+  }
+  .coming-soon-wrap { margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+  .btn-amazon { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--purple-deep); background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); padding: 14px 32px; border-radius: 30px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 20px rgba(212,168,67,0.35); white-space: nowrap; }
+  .btn-amazon:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,168,67,0.5); }
+
+  .book-series {
+    font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .book-blurb {
+    font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.85;
+    color: rgba(253,246,232,0.82); margin-bottom: 36px;
+  }
+  .book-blurb em { color: var(--gold-light); font-style: italic; }
+  .book-meta {
+    display: flex; gap: 32px; margin-bottom: 36px;
+    font-family: 'Inter', sans-serif; font-size: 0.82rem;
+    color: rgba(253,246,232,0.6);
+  }
+  .book-meta span strong { display: block; color: var(--gold-pale); font-size: 0.9rem; margin-bottom: 2px; }
+  .book-buy { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* SHOP */
+  #shop { background: linear-gradient(180deg, #0d1535 0%, #0d0520 100%); }
+
+  .shop-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 28px; max-width: 1100px; margin: 0 auto;
+  }
+  .shop-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,168,67,0.15);
+    border-radius: 16px; overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+  .shop-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(212,168,67,0.1);
+    border-color: rgba(212,168,67,0.4);
+  }
+  .shop-card-img {
+    width: 100%; aspect-ratio: 1/1; overflow: hidden;
+    background: linear-gradient(135deg, #1a0a2e, #2d1457);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .shop-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .shop-card-tag {
+    position: absolute; top: 12px; right: 12px;
+    font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 20px;
+    background: var(--gold); color: var(--purple-deep);
+  }
+  .shop-card-body { padding: 22px 24px 28px; }
+  .shop-card-name {
+    font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 600;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .shop-card-desc {
+    font-family: 'Lora', serif; font-size: 0.88rem; line-height: 1.6;
+    color: rgba(253,246,232,0.6); margin-bottom: 16px;
+  }
+  .shop-card-price {
+    font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600;
+    color: var(--gold-light);
+  }
+  .shop-card-price span { font-size: 0.8rem; font-weight: 400; color: rgba(253,246,232,0.5); margin-left: 4px; }
+  .shop-cta-wrap { text-align: center; margin-top: 50px; }
+  .shop-note {
+    font-family: 'Inter', sans-serif; font-size: 0.8rem;
+    color: rgba(253,246,232,0.45); margin-top: 16px; letter-spacing: 1px;
+  }
+
+  /* ABOUT */
+  #about { background: linear-gradient(180deg, #0d0520 0%, #10172a 100%); }
+
+  .about-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto;
+  }
+  .about-img-wrap { position: relative; display: flex; align-items: flex-end; justify-content: center; }
+  .about-img-wrap img { width: 100%; object-fit: contain; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.7)); }
+  .about-img-accent {
+    position: absolute; bottom: -20px; right: -20px;
+    width: 120px; height: 120px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    opacity: 0.12;
+  }
+  .about-body {
+    font-family: 'Lora', serif; font-size: 1.05rem; line-height: 1.85;
+    color: rgba(253,246,232,0.82);
+  }
+  .about-body p + p { margin-top: 18px; }
+  .about-body em { color: var(--gold-light); font-style: italic; }
+  .about-sig {
+    font-family: 'Playfair Display', serif; font-size: 1.3rem;
+    font-style: italic; color: var(--gold-light);
+    margin-top: 32px; display: block;
+  }
+
+  /* NEWSLETTER */
+  #newsletter {
+    background: linear-gradient(135deg, #1a0a2e 0%, #0d1535 50%, #1a0a2e 100%);
+    text-align: center; padding: 100px 60px;
+  }
+  .newsletter-inner { max-width: 600px; margin: 0 auto; }
+  .newsletter-paw {
+    font-size: 3rem; margin-bottom: 20px; display: block;
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  .newsletter-form { display: flex; gap: 12px; margin-top: 36px; }
+  .newsletter-input {
+    flex: 1; padding: 16px 24px; border-radius: 40px;
+    border: 1.5px solid rgba(212,168,67,0.3);
+    background: rgba(255,255,255,0.06);
+    color: var(--cream); font-family: 'Lora', serif; font-size: 0.95rem;
+    outline: none; transition: border-color 0.3s;
+  }
+  .newsletter-input::placeholder { color: rgba(253,246,232,0.4); }
+  .newsletter-input:focus { border-color: var(--gold); }
+  .newsletter-fine {
+    font-family: 'Inter', sans-serif; font-size: 0.75rem;
+    color: rgba(253,246,232,0.35); margin-top: 14px; letter-spacing: 0.5px;
+  }
+
+  /* CONTACT */
+  #contact { background: #0d0520; }
+  .contact-inner { max-width: 700px; margin: 0 auto; }
+  .contact-form { display: grid; gap: 18px; }
+  .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-label {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+  }
+  .form-input, .form-textarea {
+    padding: 14px 20px; border-radius: 12px;
+    border: 1.5px solid rgba(212,168,67,0.2);
+    background: rgba(255,255,255,0.05);
+    color: var(--cream); font-family: 'Lora', serif; font-size: 0.95rem;
+    outline: none; transition: border-color 0.3s; resize: none;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
+  .form-textarea { min-height: 130px; }
+  .contact-info {
+    margin-top: 50px; display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
+  }
+  .contact-item { text-align: center; }
+  .contact-item-icon { font-size: 1.6rem; margin-bottom: 8px; display: block; }
+  .contact-item-label {
+    font-family: 'Inter', sans-serif; font-size: 0.72rem;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: 4px;
+  }
+  .contact-item-val { font-family: 'Lora', serif; font-size: 0.95rem; color: rgba(253,246,232,0.7); }
+
+  /* FOOTER */
+  footer { background: #060212; padding: 50px 60px 30px; text-align: center; }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--gold-light); margin-bottom: 6px; }
+  .footer-tagline { font-family: 'Lora', serif; font-size: 0.88rem; font-style: italic; color: rgba(253,246,232,0.4); margin-bottom: 28px; }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 16px 28px; justify-content: center; list-style: none; margin-bottom: 28px; }
+  .footer-links a {
+    font-family: 'Inter', sans-serif; font-size: 0.75rem;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(253,246,232,0.4); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: rgba(253,246,232,0.25); letter-spacing: 0.5px; }
+
+  /* ANIMATIONS */
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* HAMBURGER */
+  .nav-hamburger { display: none; }
+  .mobile-menu { display: none; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-cta { display: none; }
+    .nav-links { display: none; }
+    .lang-toggle { display: none; }
+    .nav-hamburger {
+      display: flex; flex-direction: column; justify-content: center; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 6px; z-index: 10000;
+    }
+    .nav-hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--gold-light); border-radius: 2px; transition: all 0.3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu.open {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: #0a0520; z-index: 9999;
+    }
+    .mobile-menu ul { list-style: none; padding: 0; margin: 0; width: 100%; text-align: center; }
+    .mobile-menu ul li { border-bottom: 1px solid rgba(212,168,67,0.12); }
+    .mobile-menu ul li:first-child { border-top: 1px solid rgba(212,168,67,0.12); }
+    .mobile-menu ul li a {
+      display: block; padding: 20px 48px;
+      font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: rgba(253,246,232,0.85); text-decoration: none; transition: color 0.2s;
+    }
+    .mobile-menu ul li a:active { color: var(--gold-light); }
+    .mobile-menu ul li.sub-item a {
+      font-size: 0.7rem; letter-spacing: 3px;
+      color: rgba(253,246,232,0.4); padding: 14px 48px;
+    }
+    .mobile-lang-row {
+      display: flex; justify-content: center; gap: 16px; padding: 20px 48px;
+      border-top: 1px solid rgba(212,168,67,0.12);
+    }
+    .mobile-lang-row a, .mobile-lang-row span {
+      font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase; text-decoration: none;
+    }
+    .mobile-lang-row a { color: rgba(253,246,232,0.45); }
+    .mobile-lang-row span { color: var(--gold-light); }
+    section { padding: 70px 24px; }
+    #home { padding: 100px 24px 70px; }
+    .hero-inner, .book-inner, .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-book { order: -1; }
+    .hero-book img { max-width: 280px; transform: none; }
+    .shop-grid { grid-template-columns: 1fr 1fr; }
+    .contact-row { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    footer { padding: 40px 24px 24px; }
+    .coming-soon-badge { padding: 8px 14px; font-size: 0.68rem; letter-spacing: 1px; white-space: nowrap; }
+  }
+
+  /* Cookie consent banner */
+  .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998;
+    background: rgba(10,5,24,0.97); backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(212,168,67,0.18);
+    padding: 14px 60px; display: flex; align-items: center;
+    justify-content: space-between; gap: 16px;
+    font-family: 'Inter', sans-serif; font-size: 0.78rem;
+    color: rgba(253,246,232,0.6); line-height: 1.5;
+  }
+  .cookie-banner a { color: var(--gold, #d4a843); text-decoration: underline; }
+  .cookie-banner-btn {
+    flex-shrink: 0; background: linear-gradient(135deg, #d4a843 0%, #f0c866 100%);
+    color: #1a0a2e; border: none; border-radius: 20px;
+    padding: 8px 22px; font-family: 'Inter', sans-serif;
+    font-size: 0.74rem; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer; transition: transform 0.2s;
+  }
+  .cookie-banner-btn:hover { transform: translateY(-1px); }
+  @media (max-width: 600px) {
+    .cookie-banner { padding: 12px 16px; flex-direction: column; text-align: center; gap: 10px; }
+  }
+
+  /* Social media icons */
+  .footer-social { display:flex; justify-content:center; gap:20px; margin:20px 0 24px; }
+  .footer-social a { color:rgba(255,255,255,0.5); transition:color .25s, transform .25s; display:flex; line-height:0; }
+  .footer-social a:hover { color:#c4a35a; transform:translateY(-3px); }
+  .footer-social svg { width:24px; height:24px; }
+  .nav-social { display:flex; align-items:center; gap:14px; margin-right:4px; }
+  .nav-social a { color:rgba(255,255,255,0.55); transition:color .25s, transform .25s; display:flex; line-height:0; }
+  .nav-social a:hover { color:#c4a35a; transform:translateY(-2px); }
+  .nav-social svg { width:18px; height:18px; }
+  .mobile-social { display:flex; justify-content:center; gap:24px; padding:20px 0 8px; border-top:1px solid rgba(255,255,255,0.08); margin-top:8px; }
+  .mobile-social a { color:rgba(255,255,255,0.5); transition:color .25s; display:flex; line-height:0; }
+  .mobile-social a:hover { color:#c4a35a; }
+  .mobile-social svg { width:22px; height:22px; }
+  @media(max-width:900px) { .nav-social { display:none; } }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/es/" class="nav-logo">
+    Las Patitas Viajeras&trade;
+    <span>Historias de Aventuras</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/es/" class="active">Inicio</a></li>
+    <li class="nav-item-dropdown">
+      <a href="/es/libros/">Libros <span class="dropdown-arrow">&#9662;</span></a>
+      <ul class="nav-dropdown">
+        <li><a href="/es/libros/yosemite/">Yosemite</a></li>
+        <li><a href="/es/libros/laketahoe/">Lake Tahoe</a></li>
+      </ul>
+    </li>
+    <li><a href="/es/tienda/">Tienda</a></li>
+    <li><a href="/es/sobre/">Nosotros</a></li>
+    <li><a href="/es/contacto/">Contacto</a></li>
+  </ul>
+  <div class="nav-social">
+    <a href="https://www.instagram.com/theroamingpawsofficial" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=61591931605588" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+  <div class="lang-toggle">
+    <a href="/" class="lang-option" aria-label="English version">EN</a>
+    <span class="lang-sep">|</span>
+    <span class="lang-active" aria-current="true">ES</span>
+  </div>
+  <a href="/es/libros/yosemite/" class="nav-cta">Consigue el Libro</a>
+  <button class="nav-hamburger" id="navToggle" aria-label="Abrir men&#250; de navegaci&#243;n">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="mobile-menu">
+  <ul>
+    <li><a href="/es/">Inicio</a></li>
+    <li><a href="/es/libros/">Libros</a></li>
+    <li class="sub-item"><a href="/es/libros/yosemite/">Yosemite</a></li>
+    <li class="sub-item"><a href="/es/libros/laketahoe/">Lake Tahoe</a></li>
+    <li><a href="/es/tienda/">Tienda</a></li>
+    <li><a href="/es/sobre/">Nosotros</a></li>
+    <li><a href="/es/contacto/">Contacto</a></li>
+  </ul>
+  <div class="mobile-lang-row">
+    <a href="/" aria-label="English version">EN</a>
+    <span>ES</span>
+  </div>
+  <div class="mobile-social">
+    <a href="https://www.instagram.com/theroamingpawsofficial" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=61591931605588" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-stars"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-text fade-up">
+      <span class="hero-badge">Las Patitas Viajeras&trade;: Yosemite &middot; Libro Uno</span>
+      <h1 class="hero-title">Luna Encuentra su Valent&iacute;a</h1>
+      <p class="hero-subtitle">Una Aventura en Yosemite</p>
+      <p class="hero-desc">Una serie de libros infantiles inspirada en lugares reales, aventuras reales y una pequeña perrita muy real llamada Luna. Acompaña a Luna y a su compañero Oliver mientras exploran los rincones más impresionantes del mundo.</p>
+      <div class="hero-buttons">
+        <a href="/es/libros/yosemite/" class="btn-primary">Leer la Historia</a>
+        <a href="/es/tienda/" class="btn-secondary">Ver la Tienda</a>
+      </div>
+    </div>
+    <div class="hero-book fade-up">
+      <div class="hero-book-glow"></div>
+      <img src="/images/cover_es.png" alt="Luna Encuentra su Valentía &mdash; Portada del Libro" />
+    </div>
+  </div>
+</section>
+
+<!-- LIBROS -->
+<section id="book">
+  <span class="section-badge fade-up">La Serie</span>
+  <h2 class="section-title fade-up">Los Libros de Las Patitas Viajeras&trade;</h2>
+  <p class="section-subtitle fade-up">Cada libro es una aventura real. Cada lugar es un destino real.</p>
+  <div class="section-divider"></div>
+
+  <!-- LIBRO 1 -->
+  <div class="book-inner fade-up">
+    <div class="book-cover-wrap">
+      <img src="/images/cover_es.png" alt="Luna Encuentra su Valentía &mdash; Portada" />
+    </div>
+    <div class="book-details">
+      <p class="book-series">Las Patitas Viajeras&trade; : Yosemite &middot; Libro 1</p>
+      <h3 class="book-title">Luna Encuentra su Valent&iacute;a</h3>
+      <div class="book-meta">
+        <span><strong>50 P&aacute;ginas</strong>Tapa dura y blanda</span>
+        <span><strong>Edades 5&ndash;11</strong>Libro ilustrado infantil</span>
+        <span><strong>8.5&Prime; &times; 8.5&Prime;</strong>Ilustraciones a todo color</span>
+      </div>
+      <div class="book-blurb">
+        <p>Luna es una pequeña perrita con un gran corazón: juguetona, curiosa y con un poco de temor a lo desconocido.</p>
+        <br>
+        <p>Cuando Oliver la guía hacia la majestuosa naturaleza de Yosemite, entre bosques milenarios, ríos caudalosos y los cielos más impresionantes que jamás ha visto, Luna descubre algo mucho más grande que el viaje en sí.</p>
+        <br>
+        <p><em>La silenciosa decisión de seguir adelante.</em></p>
+      </div>
+      <div class="coming-soon-wrap">
+        <a href="https://www.amazon.com/dp/B0H624H3H2" class="btn-amazon" target="_blank" rel="noopener noreferrer">&#128722; Comprar en Amazon</a>
+        <button class="btn-preview" id="btn-preview-home" aria-label="Vista previa del libro">&#128065; Vista previa</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIBRO DE COLOREAR -->
+  <div class="book-inner fade-up">
+    <div class="book-cover-wrap">
+      <img src="/images/cover_coloring_es.png" alt="Luna Encuentra su Valentía &mdash; Libro de Colorear Oficial" />
+    </div>
+    <div class="book-details">
+      <p class="book-series">Las Patitas Viajeras&trade; : Yosemite &middot; Complemento</p>
+      <h3 class="book-title">Luna Encuentra su Valent&iacute;a<br><span style="font-size:0.75em; font-weight:400; color:var(--gold);">Libro de Colorear Oficial</span></h3>
+      <div class="book-meta">
+        <span><strong>48 P&aacute;ginas</strong>Tapa blanda</span>
+        <span><strong>Edades 5&ndash;11</strong>Libro de colorear infantil</span>
+        <span><strong>8.5&Prime; &times; 8.5&Prime;</strong>Ilustraciones en blanco y negro</span>
+      </div>
+      <div class="book-blurb">
+        <p>¡Da vida a la aventura de Luna en Yosemite con tus propios colores! Este libro de colorear oficial incluye 19 escenas ilustradas a mano, inspiradas en lugares reales del Parque Nacional de Yosemite.</p>
+        <br>
+        <p><em>Cada página está impresa de un solo lado para que los marcadores y lápices nunca traspasen. No hay reglas: ¡colorea con valentía!</em></p>
+      </div>
+      <div class="coming-soon-wrap">
+        <a href="https://www.amazon.com/dp/B0H66QNSQV" class="btn-amazon" target="_blank" rel="noopener noreferrer">&#128722; Comprar en Amazon</a>
+        <button class="btn-preview" data-preview="coloring" id="btn-preview-coloring-home" aria-label="Vista previa del libro de colorear">&#128065; Vista previa</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIBRO 2 - PRÓXIMAMENTE -->
+  <div class="book2-teaser fade-up">
+    <div class="book2-teaser-inner">
+      <div class="book2-cover-wrap">
+        <img src="/images/book2_cover.png" alt="Luna Encuentra su Alegría &mdash; Próximamente" />
+        <span class="book2-coming-badge">Pr&oacute;ximamente</span>
+      </div>
+      <div class="book2-text">
+        <span class="book-series">Las Patitas Viajeras&trade; : Lake Tahoe &middot; Libro 2</span>
+        <h3 class="book-title">Luna Encuentra su Alegr&iacute;a</h3>
+        <p class="book-blurb">Cuando Oliver lleva a Luna al Lake Tahoe en pleno invierno, donde las montañas están cubiertas de nieve, los pinos se doblan bajo su peso y el mundo parece estar en perfecta calma, Luna descubre que a veces los días más fríos guardan el mayor calor.</p>
+        <p style="font-family:'Inter',sans-serif; font-size:0.82rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-top:20px;">Próximamente &middot; regístrate a continuación para ser el primero en saberlo.</p>
+        <div style="margin-top:24px;">
+          <a href="#newsletter" class="btn-secondary">Notif&iacute;came</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="shop">
+  <span class="section-badge fade-up">La Tienda</span>
+  <h2 class="section-title fade-up">Lleva la Aventura a Casa</h2>
+  <p class="section-subtitle fade-up">Las fotografías reales de cada lugar que Luna visitó, disponibles como láminas de arte, lienzos y más.</p>
+  <div class="shop-grid">
+    <div class="shop-card fade-up">
+      <div class="shop-card-img">
+        <img src="/images/shop_halfdome.jpg" alt="Half Dome al Atardecer" loading="lazy" />
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-name">Half Dome al Atardecer</h3>
+        <p class="shop-card-desc">Lámina de arte de museo del icónico Half Dome brillando a la hora dorada, fotografiado desde el sendero de Luna.</p>
+        <span class="coming-soon-badge">Pr&oacute;ximamente</span>
+      </div>
+    </div>
+    <div class="shop-card fade-up">
+      <div class="shop-card-img">
+        <img src="/images/shop_sunset_layers.jpg" alt="Capas de la Sierra Nevada" loading="lazy" />
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-name">Capas de la Sierra Nevada</h3>
+        <p class="shop-card-desc">Cresta tras cresta desvaneciéndose en un horizonte ardiente. La Sierra Nevada en el momento más mágico del día.</p>
+        <span class="coming-soon-badge">Pr&oacute;ximamente</span>
+      </div>
+    </div>
+    <div class="shop-card fade-up">
+      <div class="shop-card-img">
+        <img src="/images/shop_milkyway.jpg" alt="Noche Estrellada de Yosemite" loading="lazy" />
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-name">Noche Estrellada de Yosemite</h3>
+        <p class="shop-card-desc">Un cielo tan lleno de estrellas que parece que todo el universo se acercó a saludar. La Vía Láctea sobre Yosemite.</p>
+        <span class="coming-soon-badge">Pr&oacute;ximamente</span>
+      </div>
+    </div>
+    <div class="shop-card fade-up">
+      <div class="shop-card-img">
+        <img src="/images/shop_pine_dusk.jpg" alt="Pinos al Anochecer" loading="lazy" />
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-name">Pinos al Anochecer</h3>
+        <p class="shop-card-desc">Siluetas de pinos milenarios contra un cielo degradado de naranja, oro y azul profundo. Pura serenidad de Yosemite.</p>
+        <span class="coming-soon-badge">Pr&oacute;ximamente</span>
+      </div>
+    </div>
+    <div class="shop-card fade-up">
+      <div class="shop-card-img">
+        <img src="/images/shop_halfdome_gold.jpg" alt="Half Dome, Luz Dorada" loading="lazy" />
+      </div>
+      <div class="shop-card-body">
+        <h3 class="shop-card-name">Half Dome, Luz Dorada</h3>
+        <p class="shop-card-desc">La última luz dorada del día iluminando la cara de granito del Half Dome. Una imagen que no olvidarás.</p>
+        <span class="coming-soon-badge">Pr&oacute;ximamente</span>
+      </div>
+    </div>
+  </div>
+  <div class="shop-cta-wrap fade-up">
+    <a href="/es/tienda/" class="btn-primary">Ver Todos los Productos</a>
+    <p class="shop-note">Env&iacute;os a todo el mundo &nbsp;&middot;&nbsp; Materiales de calidad muse&iacute;stica &nbsp;&middot;&nbsp; Garant&iacute;a de satisfacci&oacute;n al 100%</p>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="about">
+  <span class="section-badge fade-up">Nuestra Historia</span>
+  <h2 class="section-title fade-up">Sobre Las Patitas Viajeras&trade;</h2>
+  <div class="section-divider"></div>
+  <div class="about-inner">
+    <div class="about-img-wrap fade-up">
+      <img src="/images/luna_about_web.jpg" alt="Luna, la perrita real detrás de Las Patitas Viajeras" />
+    </div>
+    <div class="about-text fade-up">
+      <div class="about-body">
+        <p>Las Patitas Viajeras&trade; nació en la intersección de las cosas que más amamos: la fotografía, la tecnología, la familia y una pequeña perrita llamada Luna que lo cambió todo.</p>
+        <p>Antes de que llegara Luna, Oliver ya había estado en todas partes. En coche, en avión, cruzando montañas y ciudades que la mayoría solo sueña con visitar. Un compañero fiel en cada aventura, observando todo en silencio.</p>
+        <p>Luego llegó Luna y las aventuras se volvieron mucho más ruidosas.</p>
+        <p>Cada lugar de estas historias es real. Cada fotografía fue tomada con cuidado. Y cada historia fue escrita con la esperanza de que, en algún lugar, un pequeño lector decida ser un poco más valiente hoy.</p>
+        <p><em>Estas historias son sobre descubrir el mundo y descubrirte a ti mismo en el camino.</em></p>
+      </div>
+      <span class="about-sig">Las Patitas Viajeras&trade;</span>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="newsletter-inner fade-up">
+    <span class="newsletter-paw">&#128062;</span>
+    <span class="section-badge">Mantente al D&iacute;a</span>
+    <h2 class="section-title">Únete a la Aventura</h2>
+    <p class="section-subtitle">Sé el primero en conocer los nuevos libros, nuevos destinos y láminas exclusivas.</p>
+    <div id="newsletter-form" style="margin-top:36px;">
+      <form class="newsletter-form" id="nl-form-index">
+        <input type="email" class="newsletter-input" id="nl-email-index" placeholder="tu@email.com" required />
+        <button type="submit" class="btn-primary" id="nl-btn-index">Notif&iacute;came</button>
+      </form>
+      <div id="nl-success-index" style="display:none; background:rgba(212,168,67,0.08);border:1.5px solid rgba(212,168,67,0.35);border-radius:16px;padding:24px 30px;text-align:center;margin-top:12px;">
+        <p style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);margin-bottom:6px;">¡Ya estás en la lista! &#128062;</p>
+        <p style="font-family:'Lora',serif;font-size:0.9rem;color:rgba(253,246,232,0.55);">Te avisaremos en cuanto haya novedades.</p>
+      </div>
+    </div>
+    <p class="newsletter-fine">Sin spam, nunca. Solo aventuras reales. Cancela cuando quieras.</p>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contact">
+  <span class="section-badge fade-up">Cont&aacute;ctanos</span>
+  <h2 class="section-title fade-up">Cont&aacute;ctenos</h2>
+  <div class="section-divider"></div>
+  <div class="contact-inner fade-up">
+    <form class="contact-form" action="https://formspree.io/f/xjgdjnyw" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web de Las Patitas Viajeras" />
+      <div class="contact-row">
+        <div class="form-group">
+          <label class="form-label">Nombre</label>
+          <input type="text" class="form-input" name="name" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Correo electr&oacute;nico</label>
+          <input type="email" class="form-input" name="email" placeholder="tu@email.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Asunto</label>
+        <input type="text" class="form-input" name="subject" placeholder="¿De qué se trata?" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mensaje</label>
+        <textarea class="form-textarea" name="message" placeholder="Cuéntanos sobre tu aventura..." required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:fit-content;">Enviar Mensaje</button>
+    </form>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="contact-item-icon">&#127760;</span>
+        <span class="contact-item-label">Sitio Web</span>
+        <span class="contact-item-val">theroamingpaws.com</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-item-icon">&#128231;</span>
+        <span class="contact-item-label">Correo</span>
+        <span class="contact-item-val">info@theroamingpaws.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">Las Patitas Viajeras&trade;</p>
+  <p class="footer-tagline">Historias de aventuras para pequeños exploradores.</p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/theroamingpawsofficial" target="_blank" rel="noopener" aria-label="Síguenos en Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+    <a href="https://www.facebook.com/profile.php?id=61591931605588" target="_blank" rel="noopener" aria-label="Síguenos en Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+  </div>
+  <ul class="footer-links">
+    <li><a href="/es/">Inicio</a></li>
+    <li><a href="/es/libros/">Libros</a></li>
+    <li><a href="/es/tienda/">Tienda</a></li>
+    <li><a href="/es/sobre/">Nosotros</a></li>
+    <li><a href="/es/contacto/">Contacto</a></li>
+    <li><a href="/privacy">Pol&iacute;tica de Privacidad</a></li>
+    <li><a href="/terms">T&eacute;rminos de Servicio</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 Marin Creative Solutions LLC &nbsp;&middot;&nbsp; Las Patitas Viajeras&trade; es una marca de Marin Creative Solutions LLC &nbsp;&middot;&nbsp; Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type=submit]');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        window.location.href = '/thankyou.html';
+      } else {
+        btn.textContent = 'Enviar Mensaje';
+        btn.disabled = false;
+        alert('Algo salió mal. Por favor intenta de nuevo.');
+      }
+    } catch (err) {
+      btn.textContent = 'Enviar Mensaje';
+      btn.disabled = false;
+      alert('Algo salió mal. Por favor intenta de nuevo.');
+    }
+  });
+
+  async function subscribeToNewsletter(email, btnId, successId) {
+    const ML_API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZjM4ZmJhMzIwZmYzMDhjOGFjOWNiMDA2ZWVjMmM3NGY1MGY5YTljNmI3ZDdlZDRkMTlkNTU4Yjc4OGE3NTY4NjA3OTM2NjYwZGM3ZGZhYmMiLCJpYXQiOjE3ODE0OTUwNTUuNDk0NDk0LCJuYmYiOjE3ODE0OTUwNTUuNDk0NDk2LCJleHAiOjQ5MzcxNjg2NTUuNDkwODc5LCJzdWIiOiIyNDYxODM5Iiwic2NvcGVzIjpbXX0.TKREp3pygWBK8WvJi5AK71vcu6R6nEXCK3pGdV8N3-QAt5Vyv4EhCzgeMmYOGR8p0C6RhUpo6OcHnt0Du1mwSTYpzWas5kseXaMrB5xcxuznzwOIE9Rfu-8lMLu1wEqT503-ZHv2Gu7TQy-2JH4SN1us34MjAiB8BQu87rpp3uWv6uGgqzNeLltsVZ1AaesqdSJpvmaDKS3vNtXxpwJNvzoHSQ9zd8WazFpMm0qBL6Nexf7-CDvhQeuia52pMNFTCKzEoPynnbsTAp7totd5IdaDXSfBxrT8VqCeC1QVEPdLLmkFgtrm3z1wYsXqI7V2mhDIjtWPY_psspjDqEqJJB_OP8Ynf9WLpAlpPhKtqXyIqeuGvUZWGCvsagYQXwBX1PHhIG5TjC-nuutlC9Ehi-vkS6QZS7m-aVHtOvQ_fw7C5b485lbyGDaBeftmJ7gx3fg8F1JHd-_qfE2QqpbGiIwTaxC4y4sBA0mSCVlsW0iGAZXo8IaLnURhG74n5ZnjAnGRa0NsiVZmbOuCwaSkZ2bNlTDOJS05WvJsw_zDLWPjCi0Iy0UWvG4dLLdp5D98WvrUXd650LjY6V6Imm3NYaaZhOGCU8QQhowK87pZU8WyIMAt-XUH2F24rjDi3-wIhl1n6H44AVHWy3n3MUTBbsVtBOHv2mmQq9Q-RZ6SizM';
+    const ML_GROUP_ID = '190311560655144754';
+    const btn = document.getElementById(btnId);
+    const successDiv = document.getElementById(successId);
+    btn.textContent = 'Suscribiendo...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + ML_API_KEY
+        },
+        body: JSON.stringify({ email: email, groups: [ML_GROUP_ID] })
+      });
+      if (res.ok || res.status === 201 || res.status === 200) {
+        document.getElementById(btnId).closest('form').style.display = 'none';
+        successDiv.style.display = 'block';
+      } else {
+        btn.textContent = 'Notifícame';
+        btn.disabled = false;
+        alert('Algo salió mal. Por favor intenta de nuevo.');
+      }
+    } catch (err) {
+      btn.textContent = 'Notifícame';
+      btn.disabled = false;
+      alert('Algo salió mal. Por favor intenta de nuevo.');
+    }
+  }
+
+  document.getElementById('nl-form-index').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('nl-email-index').value;
+    subscribeToNewsletter(email, 'nl-btn-index', 'nl-success-index');
+  });
+
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+  }
+</script>
+
+<!-- PREVIEW MODAL -->
+<div id="preview-modal" class="preview-modal" role="dialog" aria-modal="true" aria-label="Vista previa del libro">
+  <div class="preview-backdrop" id="preview-backdrop"></div>
+  <button class="preview-close" id="preview-close" aria-label="Cerrar vista previa">&times;</button>
+  <button class="preview-nav preview-prev" id="preview-prev" aria-label="P&#225;gina anterior">&#8249;</button>
+  <div class="preview-content">
+    <div class="preview-img-wrap">
+      <img id="preview-img" src="" alt="Vista previa del libro" />
+    </div>
+    <div class="preview-counter"><span id="preview-current">1</span> / <span id="preview-total">5</span></div>
+  </div>
+  <button class="preview-nav preview-next" id="preview-next" aria-label="P&#225;gina siguiente">&#8250;</button>
+</div>
+
+<style>
+  .preview-modal {
+    display: none; position: fixed; inset: 0; z-index: 9999;
+    align-items: center; justify-content: center;
+  }
+  .preview-modal.open { display: flex; }
+  .preview-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(10,4,25,0.93);
+    backdrop-filter: blur(10px);
+  }
+  .preview-content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .preview-content img {
+    max-width: 92vw; max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(212,168,67,0.15);
+    object-fit: contain; display: block;
+    transition: opacity 0.2s ease;
+  }
+  .preview-counter {
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif; font-size: 0.78rem;
+    color: rgba(253,246,232,0.45); letter-spacing: 3px;
+  }
+  .preview-close {
+    position: fixed; top: 22px; right: 30px; z-index: 3;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 50%; width: 44px; height: 44px;
+    font-size: 1.5rem; color: rgba(253,246,232,0.7);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .preview-close:hover { background: rgba(212,168,67,0.15); color: var(--gold-light); }
+  .preview-nav {
+    position: relative; z-index: 2; flex-shrink: 0;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 50%; width: 52px; height: 52px;
+    font-size: 2rem; color: rgba(253,246,232,0.7);
+    cursor: pointer; margin: 0 16px;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .preview-nav:hover { background: rgba(212,168,67,0.15); color: var(--gold-light); }
+  .preview-nav:disabled { opacity: 0.2; cursor: default; pointer-events: none; }
+  .btn-preview {
+    font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 10px 22px; border-radius: 30px;
+    border: 1.5px solid rgba(212,168,67,0.45);
+    background: transparent; color: var(--gold-light);
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn-preview:hover { background: rgba(212,168,67,0.12); border-color: var(--gold); color: var(--gold); }
+  .preview-nav { position: absolute; top: 50%; transform: translateY(-50%); flex-shrink: 0; margin: 0; z-index: 3; }
+  .preview-prev { left: 20px; }
+  .preview-next { right: 20px; }
+  @media (max-width: 600px) {
+    .preview-content img { max-height: 60vh; }
+    .preview-nav { width: 40px; height: 40px; font-size: 1.5rem; }
+    .preview-prev { left: 8px; }
+    .preview-next { right: 8px; }
+  }
+  .preview-img-wrap { overflow: hidden; display: flex; align-items: center; justify-content: center; max-width: 92vw; }
+  #preview-img { max-width: 100%; max-height: 80vh; border-radius: 10px; box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(212,168,67,0.15); object-fit: contain; display: block; transform-origin: center; transition: transform 0.32s cubic-bezier(0.4,0,0.2,1), opacity 0.32s ease; }
+  .modal-slide #preview-img.exit-forward   { transform: translateX(-35%) scale(0.93); opacity: 0; }
+  .modal-slide #preview-img.exit-backward  { transform: translateX(35%) scale(0.93);  opacity: 0; }
+  .modal-slide #preview-img.enter-forward  { transform: translateX(35%) scale(0.93);  opacity: 0; transition: none; }
+  .modal-slide #preview-img.enter-backward { transform: translateX(-35%) scale(0.93); opacity: 0; transition: none; }
+  .modal-flip .preview-img-wrap { perspective: 1000px; }
+  .modal-flip #preview-img.exit-forward    { transform: rotateY(-90deg) scale(0.92); opacity: 0; }
+  .modal-flip #preview-img.exit-backward   { transform: rotateY(90deg)  scale(0.92); opacity: 0; }
+  .modal-flip #preview-img.enter-forward   { transform: rotateY(90deg)  scale(0.92); opacity: 0; transition: none; }
+  .modal-flip #preview-img.enter-backward  { transform: rotateY(-90deg) scale(0.92); opacity: 0; transition: none; }
+  @media (max-width: 600px) {
+    .preview-img-wrap { max-width: 96vw; }
+    #preview-img { max-height: 60vh; }
+  }
+</style>
+
+<script>
+(function() {
+  var imageSets = {
+    main: [
+      { src: '/images/preview/yosemite_pages_es/preview_p01_title.jpg',         label: '1' },
+      { src: '/images/preview/yosemite_pages_es/preview_p02_spread1_illus.jpg', label: '2' },
+      { src: '/images/preview/yosemite_pages_es/preview_p03_spread1_text.jpg',  label: '3' },
+      { src: '/images/preview/yosemite_pages_es/preview_p04_spread2_text.jpg',  label: '4' },
+      { src: '/images/preview/yosemite_pages_es/preview_p05_spread2_illus.jpg', label: '5' },
+      { src: '/images/preview/yosemite_pages_es/preview_p06_spread3_illus.jpg', label: '6' },
+      { src: '/images/preview/yosemite_pages_es/preview_p07_spread3_text.jpg',  label: '7' },
+      { src: '/images/preview/yosemite_pages_es/preview_p08_spread4_text.jpg',  label: '8' },
+      { src: '/images/preview/yosemite_pages_es/preview_p09_spread4_illus.jpg', label: '9' },
+    ],
+    coloring: [
+      { src: '/images/preview/coloring_es/coloring_p01_title.jpg',    label: '1' },
+      { src: '/images/preview/coloring_es/coloring_p02_luna.jpg',     label: '2' },
+      { src: '/images/preview/coloring_es/coloring_p03_spread00.jpg', label: '3' },
+      { src: '/images/preview/coloring_es/coloring_p04_spread01.jpg', label: '4' },
+      { src: '/images/preview/coloring_es/coloring_p05_spread02.jpg', label: '5' },
+    ],
+  };
+  var images = imageSets.main;
+  var current = 0;
+  var isAnimating = false;
+  var isFirstShow = true;
+  var modal    = document.getElementById('preview-modal');
+  var imgEl    = document.getElementById('preview-img');
+  var counter  = document.getElementById('preview-current');
+  var total    = document.getElementById('preview-total');
+  var prevBtn  = document.getElementById('preview-prev');
+  var nextBtn  = document.getElementById('preview-next');
+  var closeBtn = document.getElementById('preview-close');
+  var backdrop = document.getElementById('preview-backdrop');
+
+  total.textContent = images.length;
+
+  function show(i, direction) {
+    if (isAnimating) return;
+    isAnimating = true;
+    var dir = direction || (i > current ? 'forward' : 'backward');
+    current = i;
+    counter.textContent = i + 1;
+    total.textContent = images.length;
+    prevBtn.disabled = (i === 0);
+    nextBtn.disabled = (i === images.length - 1);
+    if (isFirstShow) {
+      imgEl.src = images[i].src;
+      imgEl.alt = 'Vista previa p&#225;gina ' + images[i].label;
+      imgEl.style.opacity = '0';
+      void imgEl.offsetWidth;
+      imgEl.style.opacity = '';
+      isFirstShow = false;
+      isAnimating = false;
+      return;
+    }
+    imgEl.classList.add('exit-' + dir);
+    setTimeout(function() {
+      imgEl.src = images[i].src;
+      imgEl.alt = 'Vista previa p&#225;gina ' + images[i].label;
+      imgEl.classList.remove('exit-' + dir);
+      imgEl.classList.add('enter-' + dir);
+      void imgEl.offsetWidth;
+      imgEl.classList.remove('enter-' + dir);
+      setTimeout(function() { isAnimating = false; }, 350);
+    }, 320);
+  }
+
+  function openModal(e) {
+    var set = (e.currentTarget.getAttribute('data-preview') === 'coloring') ? 'coloring' : 'main';
+    images = imageSets[set];
+    modal.classList.remove('modal-slide', 'modal-flip');
+    modal.classList.add('modal-flip');
+    total.textContent = images.length;
+    isFirstShow = true;
+    isAnimating = false;
+    show(0, 'forward');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    isAnimating = false;
+    imgEl.classList.remove('exit-forward', 'exit-backward', 'enter-forward', 'enter-backward');
+  }
+
+  document.querySelectorAll('.btn-preview').forEach(function(btn) {
+    btn.addEventListener('click', openModal);
+  });
+
+  prevBtn.addEventListener('click', function() {
+    if (!isAnimating && current > 0) show(current - 1, 'backward');
+  });
+  nextBtn.addEventListener('click', function() {
+    if (!isAnimating && current < images.length - 1) show(current + 1, 'forward');
+  });
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', function(e) {
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft'  && !isAnimating && current > 0) show(current - 1, 'backward');
+    if (e.key === 'ArrowRight' && !isAnimating && current < images.length - 1) show(current + 1, 'forward');
+    if (e.key === 'Escape') closeModal();
+  });
+
+  var touchStartX = 0;
+  modal.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  modal.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && !isAnimating && current < images.length - 1) show(current + 1, 'forward');
+      else if (diff < 0 && !isAnimating && current > 0) show(current - 1, 'backward');
+    }
+  }, { passive: true });
+})();
+</script>
+
+<!-- Banner de Cookies -->
+<div class="cookie-banner" id="cookie-banner" style="display:none">
+  <span>Este sitio usa cookies para habilitar el procesamiento seguro de pagos. Al continuar navegando, aceptas su uso. <a href="/privacy">Saber m&#225;s</a></span>
+  <button class="cookie-banner-btn" id="cookie-ok">Entendido</button>
+</div>
+<script>
+  (function() {
+    var banner = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('cookie_consent')) { banner.style.display = 'flex'; }
+    document.getElementById('cookie-ok').addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', '1');
+      banner.style.display = 'none';
+    });
+  })();
+</script>
+</body>
+</html>

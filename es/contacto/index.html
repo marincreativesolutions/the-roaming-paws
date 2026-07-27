@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto &mdash; Las Patitas Viajeras&trade;</title>
+  <meta name="description" content="Cont&aacute;ctate con el equipo de Las Patitas Viajeras&trade;. Nos encanta saber de ti.">
+  <meta property="og:url" content="https://theroamingpaws.com/es/contacto/">
+  <meta property="og:image" content="https://theroamingpaws.com/images/cover_es.png">
+  
+  <link rel="alternate" hreflang="en" href="https://theroamingpaws.com/contact/" />
+  <link rel="alternate" hreflang="es" href="https://theroamingpaws.com/es/contacto/" />
+  <link rel="alternate" hreflang="x-default" href="https://theroamingpaws.com/contact/" />
+  <link rel="canonical" href="https://theroamingpaws.com/es/contacto/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EY85DZ1NCV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EY85DZ1NCV');
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --purple-deep:#1a0a2e; --purple-mid:#2d1457; --purple-light:#4a2080; --gold:#d4a843; --gold-light:#f0c866; --gold-pale:#fdeebb; --cream:#fdf6e8; --white:#ffffff; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Lora',serif; background:var(--purple-deep); color:var(--cream); overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:18px 60px; background:rgba(13,5,32,0.97); backdrop-filter:blur(8px); }
+    .nav-logo { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; color:var(--gold-light); letter-spacing:1px; text-decoration:none; }
+    .nav-logo span { font-style:italic; font-weight:400; color:var(--gold-pale); font-size:0.85rem; display:block; letter-spacing:3px; text-transform:uppercase; }
+    .nav-links { display:flex; gap:36px; list-style:none; }
+    .nav-links a { font-family:'Inter',sans-serif; font-size:0.82rem; font-weight:500; color:rgba(253,246,232,0.75); letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--gold-light); }
+    .nav-cta { font-family:'Inter',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; padding:10px 24px; border-radius:30px; background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%); color:var(--purple-deep); text-decoration:none; transition:transform 0.2s,box-shadow 0.2s; box-shadow:0 4px 20px rgba(212,168,67,0.35); }
+    .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(212,168,67,0.5); }
+    .nav-item-dropdown { position:relative; }
+    .dropdown-arrow { font-size:0.65rem; margin-left:4px; opacity:0.7; }
+    .nav-dropdown { position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%) translateY(6px); background:rgba(13,5,32,0.98); border:1px solid rgba(212,168,67,0.2); border-radius:10px; padding:8px 0; min-width:160px; list-style:none; opacity:0; visibility:hidden; transition:opacity 0.2s ease,transform 0.2s ease,visibility 0.2s; z-index:1001; backdrop-filter:blur(12px); }
+    .nav-item-dropdown:hover .nav-dropdown { opacity:1; visibility:visible; transform:translateX(-50%) translateY(0); }
+    .nav-dropdown li a { display:block; padding:10px 22px; font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:500; color:rgba(253,246,232,0.7); letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:color 0.2s,background 0.2s; white-space:nowrap; }
+    .nav-dropdown li a:hover { color:var(--gold-light); background:rgba(212,168,67,0.08); }
+    .lang-toggle { display:flex; align-items:center; gap:6px; margin-right:4px; }
+    .lang-option { font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:2px; color:rgba(253,246,232,0.45); text-decoration:none; transition:color 0.25s; }
+    .lang-option:hover { color:var(--gold-light); }
+    .lang-sep { color:rgba(253,246,232,0.2); font-size:0.65rem; }
+    .lang-active { font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:2px; color:var(--gold-light); }
+    .section-badge { font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:16px; text-align:center; }
+    .section-title { font-family:'Playfair Display',serif; font-size:clamp(2rem,3.5vw,3rem); font-weight:700; color:#fff; text-align:center; margin-bottom:16px; }
+    .section-subtitle { font-family:'Lora',serif; font-size:1.05rem; font-style:italic; color:var(--gold-light); text-align:center; margin-bottom:60px; }
+    .section-divider { width:60px; height:2px; background:linear-gradient(90deg,transparent,var(--gold),transparent); margin:0 auto 60px; }
+    .btn-primary { display:inline-flex; align-items:center; gap:8px; font-family:'Inter',sans-serif; font-size:0.82rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; padding:16px 36px; border-radius:40px; background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%); color:var(--purple-deep); text-decoration:none; transition:transform 0.2s,box-shadow 0.2s; box-shadow:0 6px 30px rgba(212,168,67,0.4); border:none; cursor:pointer; }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(212,168,67,0.55); }
+    .fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    .nav-hamburger { display:none; }
+    .mobile-menu { display:none; }
+    .nav-social { display:flex; align-items:center; gap:14px; margin-right:4px; }
+    .nav-social a { color:rgba(255,255,255,0.55); transition:color .25s,transform .25s; display:flex; line-height:0; }
+    .nav-social a:hover { color:#c4a35a; transform:translateY(-2px); }
+    .nav-social svg { width:18px; height:18px; }
+    footer { background:#060212; padding:50px 60px 30px; text-align:center; }
+    .footer-logo { font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:700; color:var(--gold-light); margin-bottom:6px; }
+    .footer-tagline { font-family:'Lora',serif; font-size:0.88rem; font-style:italic; color:rgba(253,246,232,0.4); margin-bottom:28px; }
+    .footer-social { display:flex; justify-content:center; gap:20px; margin:20px 0 24px; }
+    .footer-social a { color:rgba(255,255,255,0.5); transition:color .25s,transform .25s; display:flex; line-height:0; }
+    .footer-social a:hover { color:#c4a35a; transform:translateY(-3px); }
+    .footer-social svg { width:24px; height:24px; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:16px 28px; justify-content:center; list-style:none; margin-bottom:28px; }
+    .footer-links a { font-family:'Inter',sans-serif; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; color:rgba(253,246,232,0.4); text-decoration:none; transition:color 0.3s; }
+    .footer-links a:hover { color:var(--gold); }
+    .footer-copy { font-family:'Inter',sans-serif; font-size:0.72rem; color:rgba(253,246,232,0.25); letter-spacing:0.5px; }
+    .cookie-banner { position:fixed; bottom:0; left:0; right:0; z-index:9998; background:rgba(10,5,24,0.97); backdrop-filter:blur(8px); border-top:1px solid rgba(212,168,67,0.18); padding:14px 60px; display:flex; align-items:center; justify-content:space-between; gap:16px; font-family:'Inter',sans-serif; font-size:0.78rem; color:rgba(253,246,232,0.6); line-height:1.5; }
+    .cookie-banner a { color:#d4a843; text-decoration:underline; }
+    .cookie-banner-btn { flex-shrink:0; background:linear-gradient(135deg,#d4a843 0%,#f0c866 100%); color:#1a0a2e; border:none; border-radius:20px; padding:8px 22px; font-family:'Inter',sans-serif; font-size:0.74rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; cursor:pointer; transition:transform 0.2s; }
+    .cookie-banner-btn:hover { transform:translateY(-1px); }
+    @media(max-width:900px) { nav { padding:16px 24px; } .nav-cta { display:none; } .nav-links { display:none; } .lang-toggle { display:none; } .nav-social { display:none; } .nav-hamburger { display:flex; flex-direction:column; justify-content:center; gap:5px; background:none; border:none; cursor:pointer; padding:6px; z-index:10000; } .nav-hamburger span { display:block; width:24px; height:2px; background:var(--gold-light); border-radius:2px; transition:all 0.3s; } .nav-hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); } .nav-hamburger.open span:nth-child(2) { opacity:0; } .nav-hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); } .mobile-menu.open { display:flex; flex-direction:column; align-items:center; justify-content:center; position:fixed; top:0; left:0; right:0; bottom:0; background:#0a0520; z-index:9999; } .mobile-menu ul { list-style:none; padding:0; margin:0; width:100%; text-align:center; } .mobile-menu ul li { border-bottom:1px solid rgba(212,168,67,0.12); } .mobile-menu ul li:first-child { border-top:1px solid rgba(212,168,67,0.12); } .mobile-menu ul li a { display:block; padding:20px 48px; font-family:'Inter',sans-serif; font-size:0.8rem; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:rgba(253,246,232,0.85); text-decoration:none; transition:color 0.2s; } .mobile-menu ul li.sub-item a { font-size:0.7rem; letter-spacing:3px; color:rgba(253,246,232,0.4); padding:14px 48px; } .mobile-lang-row { display:flex; justify-content:center; gap:16px; padding:20px 48px; border-top:1px solid rgba(212,168,67,0.12); } .mobile-lang-row a,.mobile-lang-row span { font-family:'Inter',sans-serif; font-size:0.75rem; font-weight:600; letter-spacing:3px; text-transform:uppercase; text-decoration:none; } .mobile-lang-row a { color:rgba(253,246,232,0.45); } .mobile-lang-row span { color:var(--gold-light); } .mobile-social { display:flex; justify-content:center; gap:24px; padding:20px 0 8px; border-top:1px solid rgba(255,255,255,0.08); margin-top:8px; } .mobile-social a { color:rgba(255,255,255,0.5); transition:color .25s; display:flex; line-height:0; } .mobile-social svg { width:22px; height:22px; } footer { padding:40px 24px 24px; } .cookie-banner { padding:12px 16px; flex-direction:column; text-align:center; gap:10px; } }
+
+    /* Page Specific CSS */
+    .page-hero { background:linear-gradient(160deg,#0d0520 0%,#2d1457 60%,#0d2040 100%); padding:140px 60px 80px; text-align:center; }
+    .page-hero-title { font-family:'Playfair Display',serif; font-size:clamp(2.5rem,4vw,3.8rem); font-weight:700; color:#fff; margin-bottom:16px; }
+    .page-hero-sub { font-family:'Lora',serif; font-size:1.1rem; color:rgba(253,246,232,0.75); max-width:680px; margin:0 auto; }
+    #contact { background:#0d0520; padding:100px 60px; }
+    .contact-inner { max-width:700px; margin:0 auto; }
+    .contact-form { display:grid; gap:18px; }
+    .contact-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .form-group { display:flex; flex-direction:column; gap:8px; }
+    .form-label { font-family:'Inter',sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+    .form-input, .form-textarea { padding:14px 20px; border-radius:12px; border:1.5px solid rgba(212,168,67,0.2); background:rgba(255,255,255,0.05); color:var(--cream); font-family:'Lora',serif; font-size:0.95rem; outline:none; transition:border-color 0.3s; resize:none; }
+    .form-input:focus, .form-textarea:focus { border-color:var(--gold); }
+    .form-textarea { min-height:130px; }
+    .contact-info { margin-top:50px; display:flex; gap:40px; justify-content:center; flex-wrap:wrap; }
+    .contact-item { text-align:center; }
+    .contact-item-icon { font-size:1.6rem; margin-bottom:8px; display:block; }
+    .contact-item-label { font-family:'Inter',sans-serif; font-size:0.72rem; letter-spacing:2px; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:4px; }
+    .contact-item-val { font-family:'Lora',serif; font-size:0.95rem; color:rgba(253,246,232,0.7); }
+    #newsletter { background:linear-gradient(135deg,#1a0a2e 0%,#0d1535 50%,#1a0a2e 100%); text-align:center; padding:100px 60px; }
+    .newsletter-inner { max-width:600px; margin:0 auto; }
+    .newsletter-paw { font-size:3rem; margin-bottom:20px; display:block; animation:float 3s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    .newsletter-form { display:flex; gap:12px; margin-top:36px; }
+    .newsletter-input { flex:1; padding:16px 24px; border-radius:40px; border:1.5px solid rgba(212,168,67,0.3); background:rgba(255,255,255,0.06); color:var(--cream); font-family:'Lora',serif; font-size:0.95rem; outline:none; transition:border-color 0.3s; }
+    .newsletter-input::placeholder { color:rgba(253,246,232,0.4); }
+    .newsletter-input:focus { border-color:var(--gold); }
+    .newsletter-fine { font-family:'Inter',sans-serif; font-size:0.75rem; color:rgba(253,246,232,0.35); margin-top:14px; letter-spacing:0.5px; }
+    @media(max-width:900px) { .page-hero { padding:120px 24px 60px; } #contact,#newsletter { padding:70px 24px; } .contact-row { grid-template-columns:1fr; } .newsletter-form { flex-direction:column; } }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="/es/" class="nav-logo">Las Patitas Viajeras&trade;<span>Historias de Aventuras</span></a>
+    <ul class="nav-links">
+      <li><a href="/es/">Inicio</a></li>
+      <li class="nav-item-dropdown"><a href="/es/libros/">Libros <span class="dropdown-arrow">&#9662;</span></a>
+        <ul class="nav-dropdown">
+          <li><a href="/es/libros/yosemite/">Yosemite</a></li>
+          <li><a href="/es/libros/laketahoe/">Lake Tahoe</a></li>
+        </ul>
+      </li>
+      <li><a href="/es/tienda/">Tienda</a></li>
+      <li><a href="/es/sobre/">Nosotros</a></li>
+      <li><a href="/es/contacto/" class="active">Contacto</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="https://www.instagram.com/theroamingpawsofficial" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61591931605588" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    </div>
+    <div class="lang-toggle">
+      <a href="/contact/" class="lang-option">EN</a>
+      <span class="lang-sep">|</span>
+      <span class="lang-active">ES</span>
+    </div>
+    <a href="/es/libros/yosemite/" class="nav-cta">Consigue el Libro</a>
+    <button class="nav-hamburger" id="navToggle" aria-label="Abrir men&uacute;"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="/es/">Inicio</a></li>
+      <li><a href="/es/libros/">Libros</a></li>
+      <li class="sub-item"><a href="/es/libros/yosemite/">Yosemite</a></li>
+      <li class="sub-item"><a href="/es/libros/laketahoe/">Lake Tahoe</a></li>
+      <li><a href="/es/tienda/">Tienda</a></li>
+      <li><a href="/es/sobre/">Nosotros</a></li>
+      <li><a href="/es/contacto/">Contacto</a></li>
+    </ul>
+    <div class="mobile-lang-row"><a href="/contact/">EN</a><span>ES</span></div>
+    <div class="mobile-social">
+      <a href="https://www.instagram.com/theroamingpawsofficial" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61591931605588" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="section-badge fade-up">Cont&aacute;ctanos</span>
+      <h1 class="page-hero-title fade-up">Cont&aacute;ctenos</h1>
+      <p class="page-hero-sub fade-up"><em>&iquest;Preguntas, consultas al por mayor, o simplemente quieres saludarnos? Nos encanta saber de ti.</em></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-inner fade-up">
+      <form class="contact-form" action="https://formspree.io/f/xjgdjnyw" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web de Las Patitas Viajeras" />
+        <div class="contact-row">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-input" name="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Correo electr&oacute;nico</label>
+            <input type="email" class="form-input" name="email" placeholder="tu@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Asunto</label>
+          <input type="text" class="form-input" name="subject" placeholder="&iquest;De qu&eacute; se trata?" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-textarea" name="message" placeholder="Cu&eacute;ntanos sobre tu aventura..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:fit-content;">Enviar Mensaje</button>
+      </form>
+      <div class="contact-info">
+        <div class="contact-item"><span class="contact-item-icon">&#127760;</span><span class="contact-item-label">Sitio Web</span><span class="contact-item-val">theroamingpaws.com</span></div>
+        <div class="contact-item"><span class="contact-item-icon">&#128231;</span><span class="contact-item-label">Correo</span><span class="contact-item-val">info@theroamingpaws.com</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <div class="newsletter-inner fade-up">
+      <span class="newsletter-paw">&#128062;</span>
+      <span class="section-badge">Mantente al D&iacute;a</span>
+      <h2 class="section-title">Un&eacute;te a la Aventura</h2>
+      <p class="section-subtitle">S&eacute; el primero en conocer los nuevos libros, nuevos destinos y l&aacute;minas exclusivas.</p>
+      <form class="newsletter-form" id="nl-form-contact">
+        <input type="email" class="newsletter-input" id="nl-email-contact" placeholder="tu@email.com" required />
+        <button type="submit" class="btn-primary" id="nl-btn-contact">Unirme</button>
+      </form>
+      <div id="nl-success-contact" style="display:none; background:rgba(212,168,67,0.08); border:1.5px solid rgba(212,168,67,0.35); border-radius:16px; padding:24px 30px; text-align:center; margin-top:12px;">
+        <p style="font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold-light);margin-bottom:6px;">&#128062; &iexcl;Ya est&aacute;s en la lista!</p>
+        <p style="font-family:'Lora',serif;font-size:0.9rem;color:rgba(253,246,232,0.55);">Te avisaremos en cuanto haya novedades.</p>
+      </div>
+      <p class="newsletter-fine">Sin spam, nunca. Solo aventuras reales. Cancela cuando quieras.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p class="footer-logo">Las Patitas Viajeras&trade;</p>
+    <p class="footer-tagline">Historias de aventuras para peque&ntilde;os exploradores.</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/theroamingpawsofficial" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=61591931605588" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="/es/">Inicio</a></li>
+      <li><a href="/es/libros/">Libros</a></li>
+      <li><a href="/es/tienda/">Tienda</a></li>
+      <li><a href="/es/sobre/">Nosotros</a></li>
+      <li><a href="/es/contacto/">Contacto</a></li>
+      <li><a href="/privacy">Pol&iacute;tica de Privacidad</a></li>
+      <li><a href="/terms">T&eacute;rminos de Servicio</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Marin Creative Solutions LLC &nbsp;&middot;&nbsp; Las Patitas Viajeras&trade; es una marca de Marin Creative Solutions LLC &nbsp;&middot;&nbsp; Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" style="display:none">
+    <span>Este sitio usa cookies para habilitar el procesamiento seguro de pagos. Al continuar navegando, aceptas su uso. <a href="/privacy">Saber m&aacute;s</a></span>
+    <button class="cookie-banner-btn" id="cookie-ok">Entendido</button>
+  </div>
+  <script>
+  (function(){
+    var b=document.getElementById('cookie-banner');
+    if(!localStorage.getItem('cookie_consent')){b.style.display='flex';}
+    document.getElementById('cookie-ok').addEventListener('click',function(){
+      localStorage.setItem('cookie_consent','1'); b.style.display='none';
+    });
+  })();
+  
+  const navbar = document.getElementById('navbar');
+  if(navbar) window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', () => { navToggle.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => { navToggle.classList.remove('open'); mobileMenu.classList.remove('open'); });
+    });
+  }
+
+  document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button[type=submit]');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+      if (res.ok) { window.location.href = '/thankyou.html'; }
+      else { btn.textContent = 'Enviar Mensaje'; btn.disabled = false; alert('Algo sali\u00f3 mal. Por favor intenta de nuevo.'); }
+    } catch(err) { btn.textContent = 'Enviar Mensaje'; btn.disabled = false; alert('Algo sali\u00f3 mal. Por favor intenta de nuevo.'); }
+  });
+
+  const subscribeToNewsletter = async (e, formId, emailId, btnId, successId, btnLabel) => {
+    e.preventDefault();
+    const email = document.getElementById(emailId).value;
+    const btn = document.getElementById(btnId);
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    const payload = {
+      email: email,
+      groups: ['190311560655144754']
+    };
+
+    try {
+      const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiZjM4ZmJhMzIwZmYzMDhjOGFjOWNiMDA2ZWVjMmM3NGY1MGY5YTljNmI3ZDdlZDRkMTlkNTU4Yjc4OGE3NTY4NjA3OTM2NjYwZGM3ZGZhYmMiLCJpYXQiOjE3ODE0OTUwNTUuNDk0NDk0LCJuYmYiOjE3ODE0OTUwNTUuNDk0NDk2LCJleHAiOjQ5MzcxNjg2NTUuNDkwODc5LCJzdWIiOiIyNDYxODM5Iiwic2NvcGVzIjpbXX0.TKREp3pygWBK8WvJi5AK71vcu6R6nEXCK3pGdV8N3-QAt5Vyv4EhCzgeMmYOGR8p0C6RhUpo6OcHnt0Du1mwSTYpzWas5kseXaMrB5xcxuznzwOIE9Rfu-8lMLu1wEqT503-ZHv2Gu7TQy-2JH4SN1us34MjAiB8BQu87rpp3uWv6uGgqzNeLltsVZ1AaesqdSJpvmaDKS3vNtXxpwJNvzoHSQ9zd8WazFpMm0qBL6Nexf7-CDvhQeuia52pMNFTCKzEoPynnbsTAp7totd5IdaDXSfBxrT8VqCeC1QVEPdLLmkFgtrm3z1wYsXqI7V2mhDIjtWPY_psspjDqEqJJB_OP8Ynf9WLpAlpPhKtqXyIqeuGvUZWGCvsagYQXwBX1PHhIG5TjC-nuutlC9Ehi-vkS6QZS7m-aVHtOvQ_fw7C5b485lbyGDaBeftmJ7gx3fg8F1JHd-_qfE2QqpbGiIwTaxC4y4sBA0mSCVlsW0iGAZXo8IaLnURhG74n5ZnjAnGRa0NsiVZmbOuCwaSkZ2bNlTDOJS05WvJsw_zDLWPjCi0Iy0UWvG4dLLdp5D98WvrUXd650LjY6V6Imm3NYaaZhOGCU8QQhowK87pZU8WyIMAt-XUH2F24rjDi3-wIhl1n6H44AVHWy3n3MUTBbsVtBOHv2mmQq9Q-RZ6SizM'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        document.getElementById(formId).style.display = 'none';
+        document.getElementById(successId).style.display = 'block';
+      } else {
+        alert('Algo sali\u00f3 mal. Por favor intenta de nuevo.');
+        btn.disabled = false;
+        btn.textContent = btnLabel;
+      }
+    } catch (error) {
+      alert('Algo sali\u00f3 mal. Por favor intenta de nuevo.');
+      btn.disabled = false;
+      btn.textContent = btnLabel;
+    }
+  };
+
+  const formContact = document.getElementById('nl-form-contact');
+  if (formContact) {
+    formContact.addEventListener('submit', (e) => {
+      subscribeToNewsletter(e, 'nl-form-contact', 'nl-email-contact', 'nl-btn-contact', 'nl-success-contact', 'Unirme');
+    });
+  }
+  </script>
+</body>
+</html>
