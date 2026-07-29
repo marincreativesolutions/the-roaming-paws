@@ -33,6 +33,67 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Structured Data -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Luna Finds Her Brave",
+    "alternateName": "The Roaming Paws: Yosemite — Book 1",
+    "author": { "@type": "Organization", "name": "Marin Creative Solutions LLC" },
+    "publisher": { "@type": "Organization", "name": "Marin Creative Solutions LLC" },
+    "isbn": "B0H568LV7S",
+    "numberOfPages": "50",
+    "bookFormat": "Paperback",
+    "inLanguage": "en",
+    "audience": { "@type": "Audience", "audienceType": "Children", "suggestedMinAge": 5, "suggestedMaxAge": 11 },
+    "url": "https://www.amazon.com/dp/B0H568LV7S",
+    "image": "https://theroamingpaws.com/images/cover_web.jpg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Luna Finds Her Brave — Official Coloring Book",
+    "alternateName": "The Roaming Paws: Yosemite Coloring Book",
+    "author": { "@type": "Organization", "name": "Marin Creative Solutions LLC" },
+    "publisher": { "@type": "Organization", "name": "Marin Creative Solutions LLC" },
+    "isbn": "B0H5VJ4JVW",
+    "numberOfPages": "48",
+    "bookFormat": "Paperback",
+    "inLanguage": "en",
+    "audience": { "@type": "Audience", "audienceType": "Children", "suggestedMinAge": 5, "suggestedMaxAge": 11 },
+    "url": "https://www.amazon.com/dp/B0H5VJ4JVW",
+    "image": "https://theroamingpaws.com/images/cover_coloring_web.jpg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "3",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Marin Creative Solutions LLC",
+    "alternateName": "The Roaming Paws",
+    "url": "https://theroamingpaws.com",
+    "logo": "https://theroamingpaws.com/images/favicon-512.png",
+    "sameAs": [
+      "https://www.instagram.com/theroamingpawsofficial",
+      "https://www.facebook.com/profile.php?id=61591931605588"
+    ]
+  }
+]
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -576,6 +637,258 @@
     .mobile-lang-row span { color:var(--gold-light); }
   }
 
+
+  /* ══ REVIEWS MARQUEE ══ */
+  .reviews-section {
+    padding: 88px 0 96px;
+    background: linear-gradient(180deg, var(--purple-deep) 0%, #0d0622 50%, var(--purple-deep) 100%);
+    overflow: hidden;
+  }
+
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 52px;
+    padding: 0 24px;
+  }
+
+  .reviews-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .reviews-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .reviews-title em { color: var(--gold-light); font-style: italic; }
+
+  .reviews-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(253, 238, 187, 0.60);
+  }
+
+  .reviews-meta-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+  /* Track wrapper - fade edges */
+  .reviews-track-wrapper {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+  }
+
+  .reviews-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: marquee-scroll 50s linear infinite;
+    padding: 8px 0 16px;
+  }
+
+  .reviews-track:hover { animation-play-state: paused; }
+
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* Individual card */
+  .review-card {
+    flex-shrink: 0;
+    width: clamp(268px, 72vw, 320px);
+    background: rgba(45, 20, 87, 0.50);
+    border: 1px solid rgba(212, 168, 67, 0.20);
+    border-radius: 18px;
+    padding: 28px 28px 22px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+
+  .review-card:hover {
+    border-color: rgba(212, 168, 67, 0.50);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  }
+
+  .review-card-stars {
+    color: var(--gold);
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+  }
+
+  .review-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+
+  .review-card-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.80rem;
+    font-weight: 400;
+    color: rgba(253, 238, 187, 0.70);
+    line-height: 1.70;
+    margin-bottom: 20px;
+  }
+
+  .review-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .review-card-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.4px;
+  }
+
+  .review-card-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: #6dd48e;
+    background: rgba(109, 212, 142, 0.10);
+    border: 1px solid rgba(109, 212, 142, 0.28);
+    border-radius: 20px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+
+  .review-card-book {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.60rem;
+    color: rgba(253,238,187,0.35);
+    margin-top: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  a.review-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .review-card-amazon-hint {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.62rem;
+    color: var(--gold);
+    opacity: 0;
+    margin-top: 10px;
+    transition: opacity 0.25s;
+    letter-spacing: 0.3px;
+  }
+
+  a.review-card:hover .review-card-amazon-hint { opacity: 1; }
+
+  @media (max-width: 640px) {
+    .reviews-section { padding: 64px 0 72px; }
+    .reviews-header { margin-bottom: 38px; }
+    .reviews-track { gap: 14px; animation-duration: 38s; }
+    .review-card { padding: 22px 20px 18px; border-radius: 14px; }
+    .review-card-title { font-size: 0.90rem; }
+    .review-card-text { font-size: 0.76rem; }
+  }
+
+
+  /* ══ STAR RATING BADGES ══ */
+  .book-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  .book-rating-stars {
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .book-rating-score {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cream);
+  }
+
+  .book-rating-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.80rem;
+    color: rgba(253, 238, 187, 0.55);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(212, 168, 67, 0.35);
+    transition: color 0.2s;
+  }
+
+  .book-rating-count:hover { color: var(--gold-light); }
+
+  .hero-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero-rating-stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+
+  .hero-rating-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: var(--cream);
+  }
+
+  .hero-rating-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.80rem;
+    color: rgba(253, 238, 187, 0.55);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(212, 168, 67, 0.35);
+    transition: color 0.2s;
+  }
+
+  .hero-rating-link:hover { color: var(--gold-light); }
+
+  @media (max-width: 640px) {
+    .book-rating { margin-bottom: 14px; }
+    .book-rating-stars { font-size: 0.90rem; }
+    .hero-rating { margin-bottom: 16px; }
+  }
+
 </style>
 </head>
 <body>
@@ -644,6 +957,11 @@
       <h1 class="hero-title">Luna Finds Her Brave</h1>
       <p class="hero-subtitle">A Yosemite Adventure</p>
       <p class="hero-desc">A children's book series inspired by real places, real adventures, and one very real dog named Luna. Join Luna and her companion Oliver as they explore the most breathtaking corners of the world.</p>
+      <div class="hero-rating">
+        <span class="hero-rating-stars">★★★★★</span>
+        <span class="hero-rating-text">5.0</span>
+        <a href="https://www.amazon.com/dp/B0H568LV7S#customerReviews" target="_blank" rel="noopener noreferrer" class="hero-rating-link">5 reviews on Amazon</a>
+      </div>
       <div class="hero-buttons">
         <a href="/books/yosemite" class="btn-primary">Read the Story</a>
         <a href="/shop" class="btn-secondary">Shop Prints</a>
@@ -683,6 +1001,11 @@
         <br>
         <p><em>It's the quiet decision to keep going anyway.</em></p>
       </div>
+      <div class="book-rating">
+        <span class="book-rating-stars">★★★★★</span>
+        <span class="book-rating-score">5.0</span>
+        <a href="https://www.amazon.com/dp/B0H568LV7S#customerReviews" target="_blank" rel="noopener noreferrer" class="book-rating-count">5 reviews on Amazon</a>
+      </div>
       <div class="coming-soon-wrap">
         <a href="https://www.amazon.com/dp/B0H568LV7S" class="btn-amazon" target="_blank" rel="noopener noreferrer">🛒 Buy on Amazon</a>
         <button class="btn-preview" id="btn-preview-home" aria-label="Preview book pages">&#128065; Preview</button>
@@ -708,6 +1031,11 @@
         <br>
         <p><em>Each page printed single-sided so markers and pencils never bleed through. There are no rules &mdash; color boldly!</em></p>
       </div>
+      <div class="book-rating">
+        <span class="book-rating-stars">★★★★★</span>
+        <span class="book-rating-score">5.0</span>
+        <a href="https://www.amazon.com/dp/B0H5VJ4JVW#customerReviews" target="_blank" rel="noopener noreferrer" class="book-rating-count">3 reviews on Amazon</a>
+      </div>
       <div class="coming-soon-wrap">
         <a href="https://www.amazon.com/dp/B0H5VJ4JVW" class="btn-amazon" target="_blank" rel="noopener noreferrer">🛒 Buy on Amazon</a>
         <button class="btn-preview" data-preview="coloring" id="btn-preview-coloring-home" aria-label="Preview coloring book pages">&#128065; Preview</button>
@@ -731,6 +1059,108 @@
           <a href="#newsletter" class="btn-secondary">Notify Me</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS MARQUEE -->
+<section class="reviews-section" aria-label="Customer Reviews">
+  <div class="reviews-header fade-up">
+    <p class="reviews-eyebrow">⭐ Amazon Reviews</p>
+    <h2 class="reviews-title">What <em>Families</em> Are Saying</h2>
+    <div class="reviews-meta">
+      <span class="reviews-meta-stars">★★★★★</span>
+      <span>5.0 &mdash; 8 verified reviews on Amazon</span>
+    </div>
+  </div>
+
+  <div class="reviews-track-wrapper">
+    <div class="reviews-track" id="reviews-track">
+
+      <a href="https://www.amazon.com/dp/B0H568LV7S#customerReviews" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-title">&ldquo;A beautiful, adventurous read for little explorers&rdquo;</div>
+        <p class="review-card-text">Such a cute story! A fantastic mix of exploration and the great outdoors, keeping kids engaged from start to finish. The illustrations are absolutely vivid and beautiful.</p>
+        <div class="review-card-footer">
+          <span class="review-card-name">Dennis T.</span>
+          <span class="review-card-badge">Verified Purchase</span>
+        </div>
+        <div class="review-card-book">Luna Finds Her Brave &bull; Amazon.com</div>
+        <div class="review-card-amazon-hint">View on Amazon &rarr;</div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0H568LV7S#customerReviews" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-title">&ldquo;Great read for littles&rdquo;</div>
+        <p class="review-card-text">A sweet story with a positive message about courage, friendship, and exploring the outdoors. We can&rsquo;t wait to visit Yosemite and see if our kids can recognize it!</p>
+        <div class="review-card-footer">
+          <span class="review-card-name">Michelle R.</span>
+          <span class="review-card-badge">Verified Purchase</span>
+        </div>
+        <div class="review-card-book">Luna Finds Her Brave &bull; Amazon.com</div>
+        <div class="review-card-amazon-hint">View on Amazon &rarr;</div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0H568LV7S#customerReviews" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-title">&ldquo;Inspirational message, beautiful images, and an overall great find!&rdquo;</div>
+        <p class="review-card-text">This is a touching story and so cute, with great imagery. Provides a great message for my son and building his confidence as a young reader.</p>
+        <div class="review-card-footer">
+          <span class="review-card-name">Allen M.</span>
+          <span class="review-card-badge">Verified Purchase</span>
+        </div>
+        <div class="review-card-book">Luna Finds Her Brave &bull; Amazon.com</div>
+        <div class="review-card-amazon-hint">View on Amazon &rarr;</div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0H568LV7S#customerReviews" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-title">&ldquo;Great Story for younglings!&rdquo;</div>
+        <p class="review-card-text">Wonderful story and very appealing to our children. They are invested in the story and want to keep reading &mdash; a great way to start them early into reading!</p>
+        <div class="review-card-footer">
+          <span class="review-card-name">Fabian S.</span>
+          <span class="review-card-badge">Verified Purchase</span>
+        </div>
+        <div class="review-card-book">Luna Finds Her Brave &bull; Amazon.com</div>
+        <div class="review-card-amazon-hint">View on Amazon &rarr;</div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0H568LV7S#customerReviews" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-title">&ldquo;Recommended for anyone with kids&rdquo;</div>
+        <p class="review-card-text">Great book! Recommended for all the little ones! Excellent illustrations and a story the whole family can enjoy together on a cozy night in.</p>
+        <div class="review-card-footer">
+          <span class="review-card-name">Oscar C.</span>
+          <span class="review-card-badge">Verified Purchase</span>
+        </div>
+        <div class="review-card-book">Luna Finds Her Brave &bull; Amazon.com</div>
+        <div class="review-card-amazon-hint">View on Amazon &rarr;</div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0H5VJ4JVW#customerReviews" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-title">&ldquo;A wonderful coloring book for children!&rdquo;</div>
+        <p class="review-card-text">The kids loved it and are invested in coloring as they make progress with the story. I&rsquo;d recommend buying both books. Great work with the design!</p>
+        <div class="review-card-footer">
+          <span class="review-card-name">Fabian S.</span>
+          <span class="review-card-badge">Verified Purchase</span>
+        </div>
+        <div class="review-card-book">Luna Coloring Book &bull; Amazon.com</div>
+        <div class="review-card-amazon-hint">View on Amazon &rarr;</div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0H5VJ4JVW#customerReviews" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <div class="review-card-title">&ldquo;Beautiful coloring book captured from the original storybook&rdquo;</div>
+        <p class="review-card-text">Truly a great companion piece to the official story book. The images are vivid and excellent &mdash; to have a coloring book to recreate it is such a great experience.</p>
+        <div class="review-card-footer">
+          <span class="review-card-name">Dennis T.</span>
+          <span class="review-card-badge">Verified Purchase</span>
+        </div>
+        <div class="review-card-book">Luna Coloring Book &bull; Amazon.com</div>
+        <div class="review-card-amazon-hint">View on Amazon &rarr;</div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -920,6 +1350,12 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Duplicate review cards for seamless infinite marquee loop
+  const reviewTrack = document.getElementById('reviews-track');
+  if (reviewTrack) {
+    reviewTrack.innerHTML += reviewTrack.innerHTML;
+  }
 
   document.querySelector('.contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
