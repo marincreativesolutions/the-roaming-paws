@@ -1,57 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ═══ ENGLISH PAGES ═══ -->
   <url>
-    <loc>https://theroamingpaws.com/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://theroamingpaws.com/about/</loc>
-    <lastmod>2026-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://theroamingpaws.com/books/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/books/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/books/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/libros/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theroamingpaws.com/books/yosemite/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/books/yosemite/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/books/yosemite/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/libros/yosemite/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://theroamingpaws.com/books/laketahoe/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/books/laketahoe/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/books/laketahoe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/libros/laketahoe/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://theroamingpaws.com/shop/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/shop/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/shop/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/tienda/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://theroamingpaws.com/contact/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/sobre/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.theroamingpaws.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/contacto/"/>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://theroamingpaws.com/privacy/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/privacy/</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://theroamingpaws.com/terms/</loc>
-    <lastmod>2026-06-19</lastmod>
+    <loc>https://www.theroamingpaws.com/terms/</loc>
+    <lastmod>2026-07-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- ═══ SPANISH PAGES ═══ -->
+  <url>
+    <loc>https://www.theroamingpaws.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.theroamingpaws.com/es/libros/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/libros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/books/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.theroamingpaws.com/es/libros/yosemite/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/libros/yosemite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/books/yosemite/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.theroamingpaws.com/es/libros/laketahoe/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/libros/laketahoe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/books/laketahoe/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.theroamingpaws.com/es/tienda/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/tienda/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/shop/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.theroamingpaws.com/es/sobre/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/about/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.theroamingpaws.com/es/contacto/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.theroamingpaws.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.theroamingpaws.com/contact/"/>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
